@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliagui Home | Collection Antique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#FDFBF7] text-[#0F2027]">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-[#FDFBF7]/95 border-b border-[#E6DFD3]/50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-serif font-bold tracking-wider">ALIAGUI HOME</a>
+            <nav class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-medium">
+                <a href="index.html" class="hover:text-[#C56C51] transition-colors">Accueil</a>
+                <a href="collections.html" class="text-[#C56C51]">Collections</a>
+                <a href="showroom.html" class="hover:text-[#C56C51] transition-colors">Showroom</a>
+                <a href="contact.html" class="hover:text-[#C56C51] transition-colors">Contact</a>
+            </nav>
+            <button id="menu-btn" class="md:hidden p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#FDFBF7] px-6 py-4 space-y-3 border-b border-[#E6DFD3]">
+            <a href="index.html" class="block text-sm py-1">Accueil</a>
+            <a href="collections.html" class="block text-sm py-1 text-[#C56C51]">Collections</a>
+            <a href="showroom.html" class="block text-sm py-1">Showroom</a>
+            <a href="contact.html" class="block text-sm py-1">Contact</a>
+        </div>
+    </header>
+
+    <!-- Fil d'ariane / Retour -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <a href="collections.html" class="text-[10px] uppercase tracking-widest text-[#0F2027]/60 hover:text-[#C56C51] flex items-center gap-2 transition-colors">
+            ← Retour aux collections
+        </a>
+    </div>
+
+    <!-- Section Détail Produit (Style Uniwax / Haut de gamme) -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            
+            <!-- Colonne Gauche : Grande Image du Produit -->
+            <div class="lg:col-span-6 bg-[#E6DFD3]/20 border border-[#E6DFD3]/40 p-3 shadow-sm">
+                <div class="w-full aspect-square overflow-hidden bg-[#E6DFD3]/30">
+                    <img src="images/IMG_alh1.PNG" alt="Collection Antique" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Colonne Droite : Informations Détaillées -->
+            <div class="lg:col-span-6 space-y-8 flex flex-col justify-center h-full">
+                <div>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-[#C56C51] font-semibold block mb-1">Édition Limitée</span>
+                    <h1 class="text-3xl font-serif tracking-wide">Collection Antique</h1>
+                    <p class="text-sm font-semibold text-[#C56C51] mt-2">Tarif : 40 000 FCFA</p>
+                </div>
+
+                <!-- Le grand texte descriptif officiel -->
+                <div class="text-sm text-[#0F2027]/70 font-light leading-relaxed space-y-4 border-t border-[#E6DFD3]/40 pt-6">
+                    <p>
+                        Il y a des motifs qui ne vieillissent jamais, car ils portent en eux l'âme de toute une histoire. Nous sommes fiers de vous présenter notre nouvelle création exclusive en pagne premium.
+                    </p>
+                    <p>
+                        Sur ce rouge royal éclatant, les cauris — symboles universels de fortune, de prospérité et de prestige — s'allient harmonieusement aux tracés et motifs ancestraux pour transformer votre chambre à coucher en une véritable demeure de roi ou de reine.
+                    </p>
+                    <p>
+                        La collection <strong>Antique</strong>, c'est bien plus que du simple linge de lit. C'est le luxe ultime de l'authenticité culturelle, la force brute de l'histoire et la douceur incomparable d'un tissage d'exception. Redonnez dès aujourd'hui à votre sommeil ses lettres de noblesse avec cette touche d'élégance unique.
+                    </p>
+                </div>
+
+                <!-- Fiche Technique / Caractéristiques -->
+                <div class="bg-[#E6DFD3]/20 border border-[#E6DFD3]/60 p-4 space-y-2 text-xs text-[#0F2027]/80">
+                    <p><strong class="font-medium text-[#C56C51]">Composition :</strong> Pagne robuste haut de gamme, textile sélectionné pour sa douceur.</p>
+                    <p><strong class="font-medium text-[#C56C51]">Entretien :</strong> Tissu traité de qualité supérieure, garanti ne peluche pas au lavage.</p>
+                    <p><strong class="font-medium text-[#C56C51]">Dimensions disponibles :</strong> Standards et sur-mesure (à préciser lors de la commande).</p>
+                </div>
+
+                <!-- Bouton d'action WhatsApp épuré -->
+                <div class="pt-2">
+                    <a href="https://wa.me/2250142789097?text=Antique-Bogolan" target="_blank" class="block w-full bg-[#0F2027] text-[#FDFBF7] text-center py-4 text-xs uppercase tracking-widest font-medium hover:bg-[#C56C51] transition-colors shadow-sm">
+                        Commander ce modèle via WhatsApp
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER PARTAGÉ -->
+    <footer class="bg-[#0F2027] text-[#FDFBF7]/70 py-12 text-xs mt-12 border-t border-[#E6DFD3]/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-2">
+                <h4 class="font-serif text-base text-[#FDFBF7] tracking-wider">ALIAGUI HOME</h4>
+                <p class="text-[#FDFBF7]/50 font-light">Le raffinement du pagne réinventé, confort et qualité premium accessible.</p>
+            </div>
+            
+            <div class="space-y-2">
+                <h4 class="uppercase tracking-widest font-medium text-[#FDFBF7]/90 text-[11px]">Suivez-nous</h4>
+                <p class="font-light text-[#FDFBF7]/50">Instagram / TikTok / Facebook</p>
+            </div>
+            
+            <div class="space-y-2 font-light">
+                <h4 class="uppercase tracking-widest font-medium text-[#FDFBF7]/90 text-[11px]">Contact</h4>
+                <p class="space-y-1">
+                    <span class="block">📞 +225 01 42 78 90 97</span>
+                    <span class="block">✉️ sublime.room@gmail.com</span>
+                    <span class="block text-[#FDFBF7]/50 mt-1">📍 Abidjan, Côte d'Ivoire</span>
+                </p>
+                <p class="text-[#FDFBF7]/30 text-[10px] pt-2">&copy; 2026 Aliagui Home. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

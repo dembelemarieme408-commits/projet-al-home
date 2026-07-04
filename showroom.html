@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliagui Home | Le Showroom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#FDFBF7] text-[#0F2027]">
+
+    <header class="sticky top-0 z-50 bg-[#FDFBF7]/95 border-b border-[#E6DFD3]/50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-serif font-bold tracking-wider">ALIAGUI HOME</a>
+            <nav class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-medium">
+                <a href="index.html" class="hover:text-[#C56C51] transition-colors">Accueil</a>
+                <a href="collections.html" class="hover:text-[#C56C51] transition-colors">Collections</a>
+                <a href="showroom.html" class="text-[#C56C51]">Showroom</a>
+                <a href="contact.html" class="hover:text-[#C56C51] transition-colors">Contact</a>
+            </nav>
+            <button id="menu-btn" class="md:hidden p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#FDFBF7] px-6 py-4 space-y-3">
+            <a href="index.html" class="block text-sm">Accueil</a>
+            <a href="collections.html" class="block text-sm">Collections</a>
+            <a href="showroom.html" class="block text-sm text-[#C56C51]">Showroom</a>
+            <a href="contact.html" class="block text-sm">Contact</a>
+        </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-6">
+                <span class="text-[10px] uppercase tracking-widest text-[#C56C51] font-semibold block">Visite Privée</span>
+                <h1 class="text-3xl font-serif">Une ambiance chaleureuse pour imaginer votre intérieur</h1>
+                <p class="text-sm text-[#0F2027]/70 font-light leading-relaxed">Venez toucher la douceur de nos étoffes, apprécier la tenue de nos parures après lavage et concevoir l'atmosphère de votre chambre à coucher au cœur de notre espace feutré.</p>
+
+                <div class="bg-[#E6DFD3]/20 p-4 border-l-2 border-[#C56C51] text-xs space-y-1 font-light">
+                    <p>📍 Riviera Anono, face au marché, Abidjan.</p>
+                    <p>🕒 Du Mardi au Samedi, de 10h à 19h.</p>
+                </div>
+
+                <div class="pt-2">
+                    <!-- Redirection modifiée vers la page contact -->
+                    <a href="contact.html" class="inline-block bg-[#C56C51] text-[#FDFBF7] px-6 py-3.5 text-xs uppercase tracking-widest font-medium shadow-sm hover:bg-[#C56C51]/90 transition-colors">Prendre RDV Showroom</a>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-6">
+                <div class="relative aspect-square bg-[#E6DFD3]/30 border border-[#E6DFD3] overflow-hidden">
+                    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                        <source src="video1.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture de vidéos.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#0F2027] text-[#FDFBF7]/70 py-12 text-xs mt-12 border-t border-[#E6DFD3]/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-2">
+                <h4 class="font-serif text-base text-[#FDFBF7] tracking-wider">ALIAGUI HOME</h4>
+                <p class="text-[#FDFBF7]/50 font-light">Le raffinement du pagne réinventé, confort et qualité premium accessible.</p>
+            </div>
+            
+            <div class="space-y-2">
+                <h4 class="uppercase tracking-widest font-medium text-[#FDFBF7]/90 text-[11px]">Suivez-nous</h4>
+                <p class="font-light text-[#FDFBF7]/50">Instagram / TikTok / Facebook</p>
+            </div>
+            
+            <div class="space-y-2 font-light">
+                <h4 class="uppercase tracking-widest font-medium text-[#FDFBF7]/90 text-[11px]">Contact</h4>
+                <p class="space-y-1">
+                    <span class="block">📞 +225 01 42 78 90 97</span>
+                    <span class="block">✉️ sublime.room@gmail.com</span>
+                    <span class="block text-[#FDFBF7]/50 mt-1">📍 Abidjan, Côte d'Ivoire</span>
+                </p>
+                <p class="text-[#FDFBF7]/30 text-[10px] pt-2">&copy; 2026 Aliagui Home. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

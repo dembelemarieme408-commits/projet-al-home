@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliagui Home | Collections</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#FDFBF7] text-[#0F2027]">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-[#FDFBF7]/95 border-b border-[#E6DFD3]/50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-serif font-bold tracking-wider">ALIAGUI HOME</a>
+            <nav class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-medium">
+                <a href="index.html" class="hover:text-[#C56C51] transition-colors">Accueil</a>
+                <a href="collections.html" class="text-[#C56C51]">Collections</a>
+                <a href="showroom.html" class="hover:text-[#C56C51] transition-colors">Showroom</a>
+                <a href="contact.html" class="hover:text-[#C56C51] transition-colors">Contact</a>
+            </nav>
+            <button id="menu-btn" class="md:hidden p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#FDFBF7] px-6 py-4 space-y-3 border-b border-[#E6DFD3]">
+            <a href="index.html" class="block text-sm py-1">Accueil</a>
+            <a href="collections.html" class="block text-sm py-1 text-[#C56C51]">Collections</a>
+            <a href="showroom.html" class="block text-sm py-1">Showroom</a>
+            <a href="contact.html" class="block text-sm py-1">Contact</a>
+        </div>
+    </header>
+
+    <!-- Catalogue Section -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="border-b border-[#E6DFD3] pb-4 mb-12">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-[#C56C51] font-semibold block mb-1">Le Catalogue Visuel</span>
+            <h1 class="text-3xl font-serif">Nos Éditions Limitées</h1>
+        </div>
+
+        <!-- ================= PREMIÈRE LIGNE : DRAPS DE LIT ================= -->
+        <div class="mb-16">
+            <div class="flex items-center gap-4 mb-6">
+                <h2 class="text-xs uppercase tracking-[0.2em] font-semibold text-[#0F2027]/60">01. Draps de lit</h2>
+                <div class="h-[1px] bg-[#E6DFD3] flex-1"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Drap 1 : Antique (FONCTIONNEL - AVEC PRIX ET NOM) -->
+                <div class="group border border-[#E6DFD3]/40 bg-[#FDFBF7] p-2 flex flex-col justify-between shadow-sm">
+                    <div class="relative w-full aspect-square bg-[#E6DFD3]/30 overflow-hidden">
+                        <img src="images/IMG_alh1.PNG" alt="Parure Antique" class="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500">
+                    </div>
+                    <div class="mt-3 px-1 flex justify-between items-baseline">
+                        <h3 class="font-serif text-sm font-medium text-[#0F2027]">Drap de lit</h3>
+                        <span class="text-xs font-semibold whitespace-nowrap text-[#C56C51]">Sur demande</span>
+                    </div>
+                    <a href="product-detail.html" class="w-full mt-3 bg-[#0F2027] text-[#FDFBF7] text-center py-2.5 text-[10px] uppercase tracking-wider font-medium hover:bg-[#C56C51] transition-colors">Voir les détails</a>
+                </div>
+
+                <!-- Drap 2 : Indigo (SUR DEMANDE / SANS NOM) -->
+                <div class="group border border-[#E6DFD3]/40 bg-[#FDFBF7] p-2 flex flex-col justify-between shadow-sm">
+                    <div class="relative w-full aspect-square bg-[#E6DFD3]/30 overflow-hidden">
+                        <img src="images/IMG_alh2.jpg" alt="Drap de lit" class="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500">
+                    </div>
+                    <div class="mt-3 px-1 flex justify-between items-baseline">
+                        <h3 class="font-serif text-sm font-medium text-[#0F2027]">Drap de lit</h3>
+                        <span class="text-xs font-semibold whitespace-nowrap text-[#C56C51]">Sur demande</span>
+                    </div>
+                    <a href="#" class="w-full mt-3 bg-[#0F2027] text-[#FDFBF7] text-center py-2.5 text-[10px] uppercase tracking-wider font-medium hover:bg-[#C56C51] transition-colors">Voir les détails</a>
+                </div>
+
+                <!-- Drap 3 : Sahara (SUR DEMANDE / SANS NOM) -->
+                <div class="group border border-[#E6DFD3]/40 bg-[#FDFBF7] p-2 flex flex-col justify-between shadow-sm">
+                    <div class="relative w-full aspect-square bg-[#E6DFD3]/30 overflow-hidden">
+                        <img src="images/IMG_alh3.jpg" alt="Drap de lit" class="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500">
+                    </div>
+                    <div class="mt-3 px-1 flex justify-between items-baseline">
+                        <h3 class="font-serif text-sm font-medium text-[#0F2027]">Drap de lit</h3>
+                        <span class="text-xs font-semibold whitespace-nowrap text-[#C56C51]">Sur demande</span>
+                    </div>
+                    <a href="#" class="w-full mt-3 bg-[#0F2027] text-[#FDFBF7] text-center py-2.5 text-[10px] uppercase tracking-wider font-medium hover:bg-[#C56C51] transition-colors">Voir les détails</a>
+                </div>
+
+                <!-- Drap 4 : Terracotta (SUR DEMANDE / SANS NOM) -->
+                <div class="group border border-[#E6DFD3]/40 bg-[#FDFBF7] p-2 flex flex-col justify-between shadow-sm">
+                    <div class="relative w-full aspect-square bg-[#E6DFD3]/30 overflow-hidden">
+                        <img src="images/IMG_alh4.jpg" alt="Drap de lit" class="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500">
+                    </div>
+                    <div class="mt-3 px-1 flex justify-between items-baseline">
+                        <h3 class="font-serif text-sm font-medium text-[#0F2027]">Drap de lit</h3>
+                        <span class="text-xs font-semibold whitespace-nowrap text-[#C56C51]">Sur demande</span>
+                    </div>
+                    <a href="#" class="w-full mt-3 bg-[#0F2027] text-[#FDFBF7] text-center py-2.5 text-[10px] uppercase tracking-wider font-medium hover:bg-[#C56C51] transition-colors">Voir les détails</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= DEUXIÈME LIGNE : ART DE LA TABLE ================= -->
+        <div>
+            <div class="flex items-center gap-4 mb-6">
+                <h2 class="text-xs uppercase tracking-[0.2em] font-semibold text-[#0F2027]/60">02. Art de la table</h2>
+                <div class="h-[1px] bg-[#E6DFD3] flex-1"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Art 1 (SUR DEMANDE / SANS NOM) -->
+                <div class="group border border-[#E6DFD3]/40 bg-[#FDFBF7] p-2 flex flex-col justify-between shadow-sm">
+                    <div class="relative w-full aspect-square bg-[#E6DFD3]/30 overflow-hidden">
+                        <img src="images/alh1.JPG" alt="Art de la table" class="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500">
+                    </div>
+                    <div class="mt-3 px-1 flex justify-between items-baseline">
+                        <h3 class="font-serif text-sm font-medium text-[#0F2027]">Sets de table</h3>
+                        <span class="text-xs font-semibold whitespace-nowrap text-[#C56C51]">Sur demande</span>
+                    </div>
+                    <a href="#" class="w-full mt-3 bg-[#0F2027] text-[#FDFBF7] text-center py-2.5 text-[10px] uppercase tracking-wider font-medium hover:bg-[#C56C51] transition-colors">Voir les détails</a>
+                </div>
+
+                <!-- Art 2 (SUR DEMANDE / SANS NOM) -->
+                <div class="group border border-[#E6DFD3]/40 bg-[#FDFBF7] p-2 flex flex-col justify-between shadow-sm">
+                    <div class="relative w-full aspect-square bg-[#E6DFD3]/30 overflow-hidden">
+                        <img src="images/alh2.JPG" alt="Art de la table" class="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500">
+                    </div>
+                    <div class="mt-3 px-1 flex justify-between items-baseline">
+                        <h3 class="font-serif text-sm font-medium text-[#0F2027]">Nappe de table</h3>
+                        <span class="text-xs font-semibold whitespace-nowrap text-[#C56C51]">Sur demande</span>
+                    </div>
+                    <a href="#" class="w-full mt-3 bg-[#0F2027] text-[#FDFBF7] text-center py-2.5 text-[10px] uppercase tracking-wider font-medium hover:bg-[#C56C51] transition-colors">Voir les détails</a>
+                </div>
+
+                <!-- Art 3 (SUR DEMANDE / SANS NOM) -->
+                <div class="group border border-[#E6DFD3]/40 bg-[#FDFBF7] p-2 flex flex-col justify-between shadow-sm">
+                    <div class="relative w-full aspect-square bg-[#E6DFD3]/30 overflow-hidden">
+                        <img src="images/alh3.JPG" alt="Art de la table" class="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500">
+                    </div>
+                    <div class="mt-3 px-1 flex justify-between items-baseline">
+                        <h3 class="font-serif text-sm font-medium text-[#0F2027]">Nappe de table</h3>
+                        <span class="text-xs font-semibold whitespace-nowrap text-[#C56C51]">Sur demande</span>
+                    </div>
+                    <a href="#" class="w-full mt-3 bg-[#0F2027] text-[#FDFBF7] text-center py-2.5 text-[10px] uppercase tracking-wider font-medium hover:bg-[#C56C51] transition-colors">Voir les détails</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER PARTAGÉ -->
+    <footer class="bg-[#0F2027] text-[#FDFBF7]/70 py-12 text-xs mt-12 border-t border-[#E6DFD3]/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-2">
+                <h4 class="font-serif text-base text-[#FDFBF7] tracking-wider">ALIAGUI HOME</h4>
+                <p class="text-[#FDFBF7]/50 font-light">Le raffinement du pagne réinventé, confort et qualité premium accessible.</p>
+            </div>
+            
+            <div class="space-y-2">
+                <h4 class="uppercase tracking-widest font-medium text-[#FDFBF7]/90 text-[11px]">Suivez-nous</h4>
+                <p class="font-light text-[#FDFBF7]/50">Instagram / TikTok / Facebook</p>
+            </div>
+            
+            <div class="space-y-2 font-light">
+                <h4 class="uppercase tracking-widest font-medium text-[#FDFBF7]/90 text-[11px]">Contact</h4>
+                <p class="space-y-1">
+                    <span class="block">📞 +225 01 42 78 90 97</span>
+                    <span class="block">✉️ sublime.room@gmail.com</span>
+                    <span class="block text-[#FDFBF7]/50 mt-1">📍 Abidjan, Côte d'Ivoire</span>
+                </p>
+                <p class="text-[#FDFBF7]/30 text-[10px] pt-2">&copy; 2026 Aliagui Home. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

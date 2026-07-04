@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliagui Home | Accueil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#FDFBF7] text-[#0F2027]">
+
+    <!-- Bandeau de transition -->
+    <div class="bg-[#0F2027] text-[#FDFBF7] text-center py-2 text-xs uppercase tracking-widest px-4">
+        Sublime Room devient <span class="text-[#C56C51] font-semibold">Aliagui Home</span>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-[#FDFBF7]/95 border-b border-[#E6DFD3]/50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-serif font-bold tracking-wider">ALIAGUI HOME</a>
+            <nav class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-medium">
+                <a href="index.html" class="text-[#C56C51]">Accueil</a>
+                <a href="collections.html" class="hover:text-[#C56C51] transition-colors">Collections</a>
+                <a href="showroom.html" class="hover:text-[#C56C51] transition-colors">Showroom</a>
+                <a href="contact.html" class="hover:text-[#C56C51] transition-colors">Contact</a>
+            </nav>
+            <div class="hidden md:block">
+                <a href="https://wa.me/2250142789097" target="_blank" class="bg-[#C56C51] text-[#FDFBF7] px-4 py-2.5 text-xs uppercase tracking-wider font-medium">WhatsApp</a>
+            </div>
+            <button id="menu-btn" class="md:hidden p-2" aria-label="Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#FDFBF7] px-6 py-4 space-y-3 border-b border-[#E6DFD3]">
+            <a href="index.html" class="block text-sm py-1 text-[#C56C51]">Accueil</a>
+            <a href="collections.html" class="block text-sm py-1">Collections</a>
+            <a href="showroom.html" class="block text-sm py-1">Showroom</a>
+            <a href="contact.html" class="block text-sm py-1">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero / Section principale -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-6">
+                <h1 class="text-3xl sm:text-5xl font-serif font-light leading-tight">Le souvenir doux du <span class="italic font-normal">pagne de maman</span> réinventé.</h1>
+                <p class="text-sm sm:text-base text-[#0F2027]/70 font-light leading-relaxed">Découvrez notre gamme exclusive de linge de maison premium mêlant confort et authenticité culturelle.</p>
+                <div class="pt-2 flex gap-4">
+                    <a href="collections.html" class="bg-[#0F2027] text-[#FDFBF7] px-6 py-3 text-xs uppercase tracking-wider font-medium">Découvrir</a>
+                    <a href="showroom.html" class="border border-[#0F2027]/30 px-6 py-3 text-xs uppercase tracking-wider font-medium">Le Showroom</a>
+                </div>
+            </div>
+            <div class="lg:col-span-6">
+                <div class="relative aspect-[4/5] bg-[#E6DFD3]/40 border border-[#E6DFD3] overflow-hidden">
+                    <img src="images/essaie2.jpg" alt="Aliagui Home Ambience" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À Propos / Histoire -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-[#E6DFD3]/30">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="bg-[#E6DFD3]/20 p-8 border border-[#E6DFD3]/40 space-y-4">
+                <span class="text-[10px] uppercase tracking-widest text-[#C56C51] font-semibold block">Notre Philosophie</span>
+                <p class="text-sm font-light text-[#0F2027]/80 leading-relaxed">Aliagui Home apporte douceur, qualité sans compromis, zéro dégorgement et zéro peluche pour sublimer vos intérieurs avec élégance et art de vivre.</p>
+            </div>
+            <div class="space-y-4">
+                <h2 class="text-2xl font-serif">À propos d'Aliagui Home</h2>
+                <p class="text-xs sm:text-sm text-[#0F2027]/60 font-light leading-relaxed">Anciennement connue sous le nom de Sublime Room, notre marque entame son rebranding pour s'orienter vers un univers lifestyle premium accessible encore plus raffiné et chaleureux.</p>
+            </div>
+        </div>
+    </section>
+
+   <!-- ================= SECTION : LES VALEURS DE LA MARQUE ================= -->
+    <!-- Modification : Ajout d'un fond couleur sable doux bg-[#E6DFD3]/20 et élargissement du padding vertical (py-20) -->
+    <section class="w-full bg-[#E6DFD3]/20 border-t border-b border-[#E6DFD3]/30 py-20 my-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="mb-12 text-center md:text-left">
+                <span class="text-[10px] uppercase tracking-[0.2em] text-[#C56C51] font-semibold block mb-1">Nos Fondations</span>
+                <h2 class="text-3xl font-serif">Les Valeurs de la Marque</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Confort -->
+                <div class="border border-[#E6DFD3]/50 bg-[#FDFBF7] p-8 space-y-3 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <h3 class="font-serif text-lg font-medium text-[#0F2027]">Confort</h3>
+                    <p class="text-xs sm:text-sm text-[#0F2027]/70 font-light leading-relaxed">Chaque produit Aliagui Home est conçu pour faire du lit un espace de refuge et de bien-être.</p>
+                </div>
+
+                <!-- Authenticité -->
+                <div class="border border-[#E6DFD3]/50 bg-[#FDFBF7] p-8 space-y-3 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <h3 class="font-serif text-lg font-medium text-[#0F2027]">Authenticité</h3>
+                    <p class="text-xs sm:text-sm text-[#0F2027]/70 font-light leading-relaxed">Aliagui Home puise ses racines dans le pagne africain, un tissu chargé de mémoire et de culture, pour créer des produits authentiquement africains et contemporains.</p>
+                </div>
+
+                <!-- Douceur -->
+                <div class="border border-[#E6DFD3]/50 bg-[#FDFBF7] p-8 space-y-3 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <h3 class="font-serif text-lg font-medium text-[#0F2027]">Douceur</h3>
+                    <p class="text-xs sm:text-sm text-[#0F2027]/70 font-light leading-relaxed">De la texture du tissu à l'expérience d'achat, chaque détail est pensé pour envelopper le client dans une sensation de douceur et d'apaisement.</p>
+                </div>
+
+                <!-- Qualité -->
+                <div class="border border-[#E6DFD3]/50 bg-[#FDFBF7] p-8 space-y-3 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <h3 class="font-serif text-lg font-medium text-[#0F2027]">Qualité</h3>
+                    <p class="text-xs sm:text-sm text-[#0F2027]/70 font-light leading-relaxed">Aliagui Home sélectionne des pagnes de qualité supérieure, confortables, durables, sans dégorgement ni peluches.</p>
+                </div>
+
+                <!-- Art de vivre -->
+                <div class="border border-[#E6DFD3]/50 bg-[#FDFBF7] p-8 space-y-3 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <h3 class="font-serif text-lg font-medium text-[#0F2027]">Art de vivre</h3>
+                    <p class="text-xs sm:text-sm text-[#0F2027]/70 font-light leading-relaxed">Aliagui Home transforme la chambre en un véritable espace de vie, où chaque détail contribue à une expérience de confort et de beauté quotidienne.</p>
+                </div>
+
+                <!-- Raffinement -->
+                <div class="border border-[#E6DFD3]/50 bg-[#FDFBF7] p-8 space-y-3 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <h3 class="font-serif text-lg font-medium text-[#0F2027]">Raffinement</h3>
+                    <p class="text-xs sm:text-sm text-[#0F2027]/70 font-light leading-relaxed">Aliagui Home traduit le pagne en élégance sobre et contemporaine, sans surcharge ni cliché, pour un raffinement qui parle à tous.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ================= SECTION : LA PARURE PHARE (FOCUS UNIQUE) ================= -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-[#E6DFD3]/30">
+        
+        <!-- En-tête épuré avec la mention demandée -->
+        <div class="mb-12">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-[#C56C51] font-semibold block mb-1">Le Choix Signature</span>
+            <h2 class="text-3xl font-serif tracking-wide uppercase">La Collection Antique</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            
+            <!-- Grande Image à gauche (Collection Antique) -->
+            <div class="lg:col-span-7 group">
+                <div class="relative aspect-[4/3] sm:aspect-[16/10] bg-[#E6DFD3]/20 border border-[#E6DFD3]/40 overflow-hidden shadow-md">
+                    <img src="images/1img.jpg" alt="Collection Antique - Aliagui Home" class="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-700">
+                    <div class="absolute top-4 left-4 bg-[#0F2027] text-[#FDFBF7] text-[9px] uppercase tracking-[0.2em] px-3 py-1.5 font-medium">
+                        Best-Seller
+                    </div>
+                </div>
+            </div>
+
+      
+    <!-- Vraie Description officielle à droite -->
+<div class="lg:col-span-5 flex flex-col justify-center h-full space-y-6 lg:pl-6">
+    <div>
+        <h3 class="font-serif text-2xl italic text-[#C56C51]">L'élégance intemporelle</h3>
+        <p class="text-[11px] text-[#0F2027]/50 uppercase tracking-wider mt-1">Collection ANTIQUE</p>
+    </div>
+    
+    <!-- La petite phrase d'accroche unique -->
+    <p class="text-sm text-[#0F2027]/70 font-light leading-relaxed">
+        Le raffinement du pagne réinventé à travers des motifs ancestraux pour sublimer votre intérieur.
+    </p>
+
+    <!-- Boutons d'action -->
+    <div class="pt-2 flex flex-col sm:flex-row gap-4">
+        <a href="https://wa.me/2250142789097?text=Antique" target="_blank" class="bg-[#C56C51] text-[#FDFBF7] text-center px-8 py-4 text-xs uppercase tracking-widest font-medium hover:bg-[#C56C51]/90 transition-colors shadow-sm">
+            Commander via WhatsApp
+        </a>
+        <a href="collections.html" class="border border-[#0F2027] text-[#0F2027] text-center px-8 py-4 text-xs uppercase tracking-widest font-medium hover:bg-[#0F2027] hover:text-[#FDFBF7] transition-all duration-300">
+            Voir toute la collection
+        </a>
+    </div>
+</div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER PARTAGÉ -->
+    <footer class="bg-[#0F2027] text-[#FDFBF7]/70 py-12 text-xs mt-12 border-t border-[#E6DFD3]/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Colonne 1 : Identité -->
+            <div class="space-y-2">
+                <h4 class="font-serif text-base text-[#FDFBF7] tracking-wider">ALIAGUI HOME</h4>
+                <p class="text-[#FDFBF7]/50 font-light">Le raffinement du pagne réinventé, confort et qualité premium accessible.</p>
+            </div>
+            
+            <!-- Colonne 2 : Réseaux -->
+            <div class="space-y-2">
+                <h4 class="uppercase tracking-widest font-medium text-[#FDFBF7]/90 text-[11px]">Suivez-nous</h4>
+                <p class="font-light text-[#FDFBF7]/50">Instagram / TikTok / Facebook</p>
+            </div>
+            
+            <!-- Colonne 3 : Contact & Localisation -->
+            <div class="space-y-2 font-light">
+                <h4 class="uppercase tracking-widest font-medium text-[#FDFBF7]/90 text-[11px]">Contact</h4>
+                <p class="space-y-1">
+                    <span class="block">📞 +225 01 42 78 90 97</span>
+                    <span class="block">✉️ sublime.room@gmail.com</span>
+                    <span class="block text-[#FDFBF7]/50 mt-1">📍 Abidjan, Côte d'Ivoire</span>
+                </p>
+                <p class="text-[#FDFBF7]/30 text-[10px] pt-2">&copy; 2026 Aliagui Home. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

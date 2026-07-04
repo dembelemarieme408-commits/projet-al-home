@@ -1,0 +1,22 @@
+/* css/style.css */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #FDFBF7; /* Crème doux[cite: 1, 2, 3] */
+    color: #0F2027;            /* Bleu profond[cite: 1, 2, 3] */
+}
+
+h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Couleurs personnalisées pour les boutons et les fonds */
+.bg-bleu-profond { background-color: #0F2027; }
+.text-bleu-profond { color: #0F2027; }
+.bg-terracotta { background-color: #C56C51; } /* Terracotta doux type terre cuite[cite: 1, 2] */
+.text-terracotta { color: #C56C51; }
+.bg-creme { background-color: #FDFBF7; }
+.bg-sable { background-color: #E6DFD3; } /* Matières naturelles / Japandi[cite: 2, 3] */
+
+/* Masquage des barres de défilement */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
