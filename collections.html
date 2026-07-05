@@ -3,167 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aliagui Home | Collections</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Découvrez nos éditions limitées de linge de lit et art de la table en pagne africain premium. Aliagui Home, l'élégance et la douceur au quotidien.">
+    <meta name="theme-color" content="#0F2027">
+    <title>Aliagui Home | Collections & Éditions Limitées</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body class="bg-[#FDFBF7] text-[#0F2027]">
+<body>
 
-    <!-- Header / Navigation -->
-    <header class="sticky top-0 z-50 bg-[#FDFBF7]/95 border-b border-[#E6DFD3]/50 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="index.html" class="text-xl font-serif font-bold tracking-wider">ALIAGUI HOME</a>
-            <nav class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-medium">
-                <a href="index.html" class="hover:text-[#C56C51] transition-colors">Accueil</a>
-                <a href="collections.html" class="text-[#C56C51]">Collections</a>
-                <a href="showroom.html" class="hover:text-[#C56C51] transition-colors">Showroom</a>
-                <a href="contact.html" class="hover:text-[#C56C51] transition-colors">Contact</a>
+    <!-- ═══ Bandeau d'annonce ═══ -->
+    <div class="announcement-bar">
+        Sublime Room devient <strong>Aliagui Home</strong> — Une nouvelle ère de raffinement
+    </div>
+
+    <!-- ═══ HEADER / Navigation ═══ -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">ALIAGUI HOME</a>
+
+            <nav class="nav-desktop">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="collections.html" class="nav-link active">Collections</a>
+                <a href="showroom.html" class="nav-link">Showroom</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="https://wa.me/2250142789097" target="_blank" rel="noopener" class="btn-whatsapp-nav" aria-label="Contactez-nous sur WhatsApp">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.37 0-4.567-.804-6.318-2.155l-.441-.348-3.165 1.061 1.061-3.165-.348-.441A9.963 9.963 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                    WhatsApp
+                </a>
             </nav>
-            <button id="menu-btn" class="md:hidden p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+
+            <button id="menu-btn" class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-[#FDFBF7] px-6 py-4 space-y-3 border-b border-[#E6DFD3]">
-            <a href="index.html" class="block text-sm py-1">Accueil</a>
-            <a href="collections.html" class="block text-sm py-1 text-[#C56C51]">Collections</a>
-            <a href="showroom.html" class="block text-sm py-1">Showroom</a>
-            <a href="contact.html" class="block text-sm py-1">Contact</a>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="index.html">Accueil</a>
+            <a href="collections.html" class="active">Collections</a>
+            <a href="showroom.html">Showroom</a>
+            <a href="contact.html">Contact</a>
         </div>
     </header>
 
-    <!-- Catalogue Section -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="border-b border-[#E6DFD3] pb-4 mb-12">
-            <span class="text-[10px] uppercase tracking-[0.2em] text-[#C56C51] font-semibold block mb-1">Le Catalogue Visuel</span>
-            <h1 class="text-3xl font-serif">Nos Éditions Limitées</h1>
+    <!-- ═══ PAGE HERO ═══ -->
+    <section class="page-hero">
+        <img src="images/alh2.jpg" alt="Linge de maison de luxe en pagne" class="page-hero-bg">
+        <div class="page-hero-content reveal">
+            <span class="section-label" style="color:rgba(253, 251, 247, 0.8);">Le Catalogue Visuel</span>
+            <h1 style="font-family:'Playfair Display', Georgia, serif; font-weight:300;">Nos Éditions Limitées</h1>
+            <p>Explorez des créations uniques alliant authenticité culturelle et douceur moderne.</p>
+        </div>
+    </section>
+
+    <!-- ═══ CATALOGUE MAIN CONTENT ═══ -->
+    <main class="section">
+        
+        <!-- ================= SECTION 1: DRAPS DE LIT ================= -->
+        <div style="margin-bottom:5rem;">
+            <div class="category-header reveal">
+                <h2>01. Draps de lit</h2>
+                <div class="category-line"></div>
+            </div>
+
+            <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 2rem;">
+                <!-- Drap 1: Antique (Avec lien) -->
+                <div class="product-card reveal stagger-1">
+                    <div class="product-card-image">
+                        <img src="images/IMG_alh1.PNG" alt="Parure Antique - Aliagui Home" loading="lazy">
+                    </div>
+                    <div class="product-card-body">
+                        <h3>Collection Antique</h3>
+                        <span class="price">40 000 FCFA</span>
+                    </div>
+                    <a href="product-detail.html" class="product-card-btn">Voir les détails</a>
+                </div>
+
+                <!-- Drap 2: Indigo -->
+                <div class="product-card reveal stagger-2">
+                    <div class="product-card-image">
+                        <img src="images/IMG_alh2.jpg" alt="Drap de lit Indigo - Aliagui Home" loading="lazy">
+                    </div>
+                    <div class="product-card-body">
+                        <h3>Collection Indigo</h3>
+                        <span class="price">Sur demande</span>
+                    </div>
+                    <a href="https://wa.me/2250142789097?text=Bonjour,%20je%20souhaite%20des%20informations%20sur%20la%20Collection%20Indigo" target="_blank" rel="noopener" class="product-card-btn">Demander des infos</a>
+                </div>
+
+                <!-- Drap 3: Sahara -->
+                <div class="product-card reveal stagger-3">
+                    <div class="product-card-image">
+                        <img src="images/IMG_alh3.jpg" alt="Drap de lit Sahara - Aliagui Home" loading="lazy">
+                    </div>
+                    <div class="product-card-body">
+                        <h3>Collection Sahara</h3>
+                        <span class="price">Sur demande</span>
+                    </div>
+                    <a href="https://wa.me/2250142789097?text=Bonjour,%20je%20souhaite%20des%20informations%20sur%20la%20Collection%20Sahara" target="_blank" rel="noopener" class="product-card-btn">Demander des infos</a>
+                </div>
+
+                <!-- Drap 4: Terracotta -->
+                <div class="product-card reveal stagger-4">
+                    <div class="product-card-image">
+                        <img src="images/IMG_alh4.jpg" alt="Drap de lit Terracotta - Aliagui Home" loading="lazy">
+                    </div>
+                    <div class="product-card-body">
+                        <h3>Collection Terracotta</h3>
+                        <span class="price">Sur demande</span>
+                    </div>
+                    <a href="https://wa.me/2250142789097?text=Bonjour,%20je%20souhaite%20des%20informations%20sur%20la%20Collection%20Terracotta" target="_blank" rel="noopener" class="product-card-btn">Demander des infos</a>
+                </div>
+            </div>
         </div>
 
-        <!-- ================= PREMIÈRE LIGNE : DRAPS DE LIT ================= -->
-        <div class="mb-16">
-            <div class="flex items-center gap-4 mb-6">
-                <h2 class="text-xs uppercase tracking-[0.2em] font-semibold text-[#0F2027]/60">01. Draps de lit</h2>
-                <div class="h-[1px] bg-[#E6DFD3] flex-1"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Drap 1 : Antique (FONCTIONNEL - AVEC PRIX ET NOM) -->
-                <div class="group border border-[#E6DFD3]/40 bg-[#FDFBF7] p-2 flex flex-col justify-between shadow-sm">
-                    <div class="relative w-full aspect-square bg-[#E6DFD3]/30 overflow-hidden">
-                        <img src="images/IMG_alh1.PNG" alt="Parure Antique" class="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500">
-                    </div>
-                    <div class="mt-3 px-1 flex justify-between items-baseline">
-                        <h3 class="font-serif text-sm font-medium text-[#0F2027]">Drap de lit</h3>
-                        <span class="text-xs font-semibold whitespace-nowrap text-[#C56C51]">Sur demande</span>
-                    </div>
-                    <a href="product-detail.html" class="w-full mt-3 bg-[#0F2027] text-[#FDFBF7] text-center py-2.5 text-[10px] uppercase tracking-wider font-medium hover:bg-[#C56C51] transition-colors">Voir les détails</a>
-                </div>
-
-                <!-- Drap 2 : Indigo (SUR DEMANDE / SANS NOM) -->
-                <div class="group border border-[#E6DFD3]/40 bg-[#FDFBF7] p-2 flex flex-col justify-between shadow-sm">
-                    <div class="relative w-full aspect-square bg-[#E6DFD3]/30 overflow-hidden">
-                        <img src="images/IMG_alh2.jpg" alt="Drap de lit" class="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500">
-                    </div>
-                    <div class="mt-3 px-1 flex justify-between items-baseline">
-                        <h3 class="font-serif text-sm font-medium text-[#0F2027]">Drap de lit</h3>
-                        <span class="text-xs font-semibold whitespace-nowrap text-[#C56C51]">Sur demande</span>
-                    </div>
-                    <a href="#" class="w-full mt-3 bg-[#0F2027] text-[#FDFBF7] text-center py-2.5 text-[10px] uppercase tracking-wider font-medium hover:bg-[#C56C51] transition-colors">Voir les détails</a>
-                </div>
-
-                <!-- Drap 3 : Sahara (SUR DEMANDE / SANS NOM) -->
-                <div class="group border border-[#E6DFD3]/40 bg-[#FDFBF7] p-2 flex flex-col justify-between shadow-sm">
-                    <div class="relative w-full aspect-square bg-[#E6DFD3]/30 overflow-hidden">
-                        <img src="images/IMG_alh3.jpg" alt="Drap de lit" class="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500">
-                    </div>
-                    <div class="mt-3 px-1 flex justify-between items-baseline">
-                        <h3 class="font-serif text-sm font-medium text-[#0F2027]">Drap de lit</h3>
-                        <span class="text-xs font-semibold whitespace-nowrap text-[#C56C51]">Sur demande</span>
-                    </div>
-                    <a href="#" class="w-full mt-3 bg-[#0F2027] text-[#FDFBF7] text-center py-2.5 text-[10px] uppercase tracking-wider font-medium hover:bg-[#C56C51] transition-colors">Voir les détails</a>
-                </div>
-
-                <!-- Drap 4 : Terracotta (SUR DEMANDE / SANS NOM) -->
-                <div class="group border border-[#E6DFD3]/40 bg-[#FDFBF7] p-2 flex flex-col justify-between shadow-sm">
-                    <div class="relative w-full aspect-square bg-[#E6DFD3]/30 overflow-hidden">
-                        <img src="images/IMG_alh4.jpg" alt="Drap de lit" class="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500">
-                    </div>
-                    <div class="mt-3 px-1 flex justify-between items-baseline">
-                        <h3 class="font-serif text-sm font-medium text-[#0F2027]">Drap de lit</h3>
-                        <span class="text-xs font-semibold whitespace-nowrap text-[#C56C51]">Sur demande</span>
-                    </div>
-                    <a href="#" class="w-full mt-3 bg-[#0F2027] text-[#FDFBF7] text-center py-2.5 text-[10px] uppercase tracking-wider font-medium hover:bg-[#C56C51] transition-colors">Voir les détails</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- ================= DEUXIÈME LIGNE : ART DE LA TABLE ================= -->
+        <!-- ================= SECTION 2: ART DE LA TABLE ================= -->
         <div>
-            <div class="flex items-center gap-4 mb-6">
-                <h2 class="text-xs uppercase tracking-[0.2em] font-semibold text-[#0F2027]/60">02. Art de la table</h2>
-                <div class="h-[1px] bg-[#E6DFD3] flex-1"></div>
+            <div class="category-header reveal">
+                <h2>02. Art de la table</h2>
+                <div class="category-line"></div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Art 1 (SUR DEMANDE / SANS NOM) -->
-                <div class="group border border-[#E6DFD3]/40 bg-[#FDFBF7] p-2 flex flex-col justify-between shadow-sm">
-                    <div class="relative w-full aspect-square bg-[#E6DFD3]/30 overflow-hidden">
-                        <img src="images/alh1.JPG" alt="Art de la table" class="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500">
+            <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 2rem;">
+                <!-- Table 1 -->
+                <div class="product-card reveal stagger-1">
+                    <div class="product-card-image">
+                        <img src="images/alh1.jpg" alt="Sets de table - Aliagui Home" loading="lazy">
                     </div>
-                    <div class="mt-3 px-1 flex justify-between items-baseline">
-                        <h3 class="font-serif text-sm font-medium text-[#0F2027]">Sets de table</h3>
-                        <span class="text-xs font-semibold whitespace-nowrap text-[#C56C51]">Sur demande</span>
+                    <div class="product-card-body">
+                        <h3>Sets de table Premium</h3>
+                        <span class="price">Sur demande</span>
                     </div>
-                    <a href="#" class="w-full mt-3 bg-[#0F2027] text-[#FDFBF7] text-center py-2.5 text-[10px] uppercase tracking-wider font-medium hover:bg-[#C56C51] transition-colors">Voir les détails</a>
+                    <a href="https://wa.me/2250142789097?text=Bonjour,%20je%20souhaite%20des%20informations%20sur%20les%20sets%20de%20table" target="_blank" rel="noopener" class="product-card-btn">Demander des infos</a>
                 </div>
 
-                <!-- Art 2 (SUR DEMANDE / SANS NOM) -->
-                <div class="group border border-[#E6DFD3]/40 bg-[#FDFBF7] p-2 flex flex-col justify-between shadow-sm">
-                    <div class="relative w-full aspect-square bg-[#E6DFD3]/30 overflow-hidden">
-                        <img src="images/alh2.JPG" alt="Art de la table" class="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500">
+                <!-- Table 2 -->
+                <div class="product-card reveal stagger-2">
+                    <div class="product-card-image">
+                        <img src="images/alh2.jpg" alt="Nappe de table - Aliagui Home" loading="lazy">
                     </div>
-                    <div class="mt-3 px-1 flex justify-between items-baseline">
-                        <h3 class="font-serif text-sm font-medium text-[#0F2027]">Nappe de table</h3>
-                        <span class="text-xs font-semibold whitespace-nowrap text-[#C56C51]">Sur demande</span>
+                    <div class="product-card-body">
+                        <h3>Nappe de table Tradition</h3>
+                        <span class="price">Sur demande</span>
                     </div>
-                    <a href="#" class="w-full mt-3 bg-[#0F2027] text-[#FDFBF7] text-center py-2.5 text-[10px] uppercase tracking-wider font-medium hover:bg-[#C56C51] transition-colors">Voir les détails</a>
+                    <a href="https://wa.me/2250142789097?text=Bonjour,%20je%20souhaite%20des%20informations%20sur%20la%20nappe%20de%20table%20Tradition" target="_blank" rel="noopener" class="product-card-btn">Demander des infos</a>
                 </div>
 
-                <!-- Art 3 (SUR DEMANDE / SANS NOM) -->
-                <div class="group border border-[#E6DFD3]/40 bg-[#FDFBF7] p-2 flex flex-col justify-between shadow-sm">
-                    <div class="relative w-full aspect-square bg-[#E6DFD3]/30 overflow-hidden">
-                        <img src="images/alh3.JPG" alt="Art de la table" class="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500">
+                <!-- Table 3 -->
+                <div class="product-card reveal stagger-3">
+                    <div class="product-card-image">
+                        <img src="images/alh3.jpg" alt="Nappe de table prestige - Aliagui Home" loading="lazy">
                     </div>
-                    <div class="mt-3 px-1 flex justify-between items-baseline">
-                        <h3 class="font-serif text-sm font-medium text-[#0F2027]">Nappe de table</h3>
-                        <span class="text-xs font-semibold whitespace-nowrap text-[#C56C51]">Sur demande</span>
+                    <div class="product-card-body">
+                        <h3>Nappe de table Prestige</h3>
+                        <span class="price">Sur demande</span>
                     </div>
-                    <a href="#" class="w-full mt-3 bg-[#0F2027] text-[#FDFBF7] text-center py-2.5 text-[10px] uppercase tracking-wider font-medium hover:bg-[#C56C51] transition-colors">Voir les détails</a>
+                    <a href="https://wa.me/2250142789097?text=Bonjour,%20je%20souhaite%20des%20informations%20sur%20la%20nappe%20de%20table%20Prestige" target="_blank" rel="noopener" class="product-card-btn">Demander des infos</a>
                 </div>
             </div>
         </div>
+
     </main>
 
-    <!-- FOOTER PARTAGÉ -->
-    <footer class="bg-[#0F2027] text-[#FDFBF7]/70 py-12 text-xs mt-12 border-t border-[#E6DFD3]/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="space-y-2">
-                <h4 class="font-serif text-base text-[#FDFBF7] tracking-wider">ALIAGUI HOME</h4>
-                <p class="text-[#FDFBF7]/50 font-light">Le raffinement du pagne réinventé, confort et qualité premium accessible.</p>
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <!-- Marque -->
+            <div class="footer-brand">
+                <h4>ALIAGUI HOME</h4>
+                <p>Le raffinement du pagne réinventé. Confort, authenticité et qualité premium pour sublimer vos intérieurs.</p>
+                <div class="footer-social" style="margin-top:1.25rem;">
+                    <a href="#" aria-label="Instagram">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="#" aria-label="TikTok">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.48V13a8.28 8.28 0 005.58 2.16v-3.44a4.85 4.85 0 01-3.77-1.26V6.69h3.77z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                </div>
             </div>
-            
-            <div class="space-y-2">
-                <h4 class="uppercase tracking-widest font-medium text-[#FDFBF7]/90 text-[11px]">Suivez-nous</h4>
-                <p class="font-light text-[#FDFBF7]/50">Instagram / TikTok / Facebook</p>
+
+            <!-- Navigation -->
+            <div>
+                <h5 class="footer-heading">Navigation</h5>
+                <ul class="footer-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="showroom.html">Showroom</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-            
-            <div class="space-y-2 font-light">
-                <h4 class="uppercase tracking-widest font-medium text-[#FDFBF7]/90 text-[11px]">Contact</h4>
-                <p class="space-y-1">
-                    <span class="block">📞 +225 01 42 78 90 97</span>
-                    <span class="block">✉️ sublime.room@gmail.com</span>
-                    <span class="block text-[#FDFBF7]/50 mt-1">📍 Abidjan, Côte d'Ivoire</span>
-                </p>
-                <p class="text-[#FDFBF7]/30 text-[10px] pt-2">&copy; 2026 Aliagui Home. Tous droits réservés.</p>
+
+            <!-- Collections -->
+            <div>
+                <h5 class="footer-heading">Collections</h5>
+                <ul class="footer-links">
+                    <li><a href="product-detail.html">Collection Antique</a></li>
+                    <li><a href="collections.html">Draps de Lit</a></li>
+                    <li><a href="collections.html">Art de la Table</a></li>
+                </ul>
             </div>
+
+            <!-- Contact -->
+            <div>
+                <h5 class="footer-heading">Contact</h5>
+                <div class="footer-contact-item">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+                    +225 01 42 78 90 97
+                </div>
+                <div class="footer-contact-item">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+                    sublime.room@gmail.com
+                </div>
+                <div class="footer-contact-item" style="color:rgba(253,251,247,0.35); margin-top:0.5rem;">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+                    Abidjan, Côte d'Ivoire
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aliagui Home. Tous droits réservés.</p>
+            <p>Conçu avec ❤ à Abidjan</p>
         </div>
     </footer>
 
