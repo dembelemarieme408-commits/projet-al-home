@@ -8,6 +8,8 @@
     <title>Aliagui Home | Contact</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Intégration de Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -17,61 +19,75 @@
     </div>
 
     <!-- ═══ HEADER / Navigation ═══ -->
-    <header class="site-header">
-        <div class="header-inner">
-            <a href="index.html" class="logo">ALIAGUI HOME</a>
+    <!-- ═══ HEADER / Navigation Corrigé ═══ -->
+<header class="site-header bg-white border-b border-[rgba(230,223,211,0.45)]">
+  <!-- flex et items-center forcent l'alignement vertical parfait de tous les éléments -->
+  <div class="header-inner flex items-center justify-between h-24 px-4 max-w-7xl mx-auto">
+    
+    <!-- Zone Logo ajustée -->
+    <a href="index.html" class="logo flex items-center h-full py-2">
+      <img 
+        src="images/logo.svg" 
+        alt="Aliagui Home" 
+        class="h-full w-auto max-h-16 object-contain"
+      />
+    </a>
 
-            <nav class="nav-desktop">
-                <a href="index.html" class="nav-link">Accueil</a>
-                <a href="collections.html" class="nav-link">Collections</a>
-                <a href="showroom.html" class="nav-link">Showroom</a>
-                <a href="contact.html" class="nav-link active">Contact</a>
-                <a href="https://wa.me/2250142789097" target="_blank" rel="noopener" class="btn-whatsapp-nav" aria-label="Contactez-nous sur WhatsApp">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.37 0-4.567-.804-6.318-2.155l-.441-.348-3.165 1.061 1.061-3.165-.348-.441A9.963 9.963 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-                    WhatsApp
-                </a>
-            </nav>
+    <!-- Menu de navigation -->
+    <nav class="nav-desktop flex items-center gap-8">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="collections.html" class="nav-link">Collections</a>
+      <a href="showroom.html" class="nav-link">Showroom</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a
+        href="https://wa.me/2250142789097"
+        target="_blank"
+        rel="noopener"
+        class="btn-whatsapp-nav flex items-center gap-2"
+        aria-label="Contactez-nous sur WhatsApp">
+        WhatsApp
+      </a>
+    </nav>
 
-            <button id="menu-btn" class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
-                <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
-
-        <div id="mobile-menu" class="mobile-menu">
-            <a href="index.html">Accueil</a>
-            <a href="collections.html">Collections</a>
-            <a href="showroom.html">Showroom</a>
-            <a href="contact.html" class="active">Contact</a>
-        </div>
-    </header>
+    <!-- Bouton Menu Mobile (Burger) -->
+    <button
+      id="menu-btn"
+      class="menu-toggle lg:hidden"
+      aria-label="Ouvrir le menu"
+      aria-expanded="false"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+</header>
 
     <!-- ═══ MAIN CONTACT CONTENT ═══ -->
     <main class="section">
         <div class="section-header text-center reveal">
             <span class="section-label">Restons en contact</span>
             <h1 class="section-title">Une question ou un projet ?</h1>
-            <p class="section-subtitle" style="margin-left:auto; margin-right:auto;">Besoin d'un conseil personnalisé pour votre aménagement ou d'une commande sur-mesure ? Nous vous répondons rapidement.</p>
-            <div class="section-divider" style="margin-left:auto; margin-right:auto;"></div>
+            <p class="section-subtitle mx-auto">Besoin d'un conseil personnalisé pour votre aménagement ou d'une commande sur-mesure ? Nous vous répondons rapidement.</p>
+            <div class="section-divider mx-auto"></div>
         </div>
 
         <div class="contact-grid">
             <!-- Infos de contact -->
             <div class="contact-channels reveal-left">
-                <div style="margin-bottom:2rem;">
+                <div class="mb-8">
                     <h3>Canaux Directs</h3>
-                    <p style="font-size:0.95rem; font-weight:400; color:#0F2027; margin-top:0.5rem;">📞 +225 01 42 78 90 97</p>
-                    <p style="font-size:0.95rem; font-weight:400; color:#0F2027;">✉️ sublime.room@gmail.com</p>
+                    <p class="text-[0.95rem] font-normal text-[#0F2027] mt-2">📞 +225 01 42 78 90 97</p>
+                    <p class="text-[0.95rem] font-normal text-[#0F2027]">✉️ sublime.room@gmail.com</p>
                 </div>
-                <div style="margin-bottom:2rem;">
+                <div class="mb-8">
                     <h3>Le Showroom</h3>
-                    <p style="margin-top:0.5rem;">Riviera Anono, face au marché, Abidjan</p>
-                    <p style="color:rgba(15,32,39,0.5); font-size:0.75rem;">Du Mardi au Samedi, de 10h à 19h</p>
+                    <p class="mt-2">Riviera Anono, face au marché, Abidjan</p>
+                    <p class="text-[#0F2027]/50 text-[0.75rem]">Du Mardi au Samedi, de 10h à 19h</p>
                 </div>
                 <div>
                     <h3>Suivez-nous</h3>
-                    <p style="margin-top:0.5rem; text-transform:uppercase; letter-spacing:0.1em; font-size:0.75rem;">Instagram / TikTok / Facebook</p>
+                    <p class="mt-2 uppercase tracking-[0.1em] text-[0.75rem]">Instagram / TikTok / Facebook</p>
                 </div>
             </div>
 
@@ -92,10 +108,10 @@
         </div>
 
         <!-- Google Maps Embed -->
-        <div class="reveal-scale stagger-3" style="margin-top:4rem;">
-            <div class="section-header text-center" style="margin-bottom:1.5rem;">
+        <div class="reveal-scale stagger-3 mt-16">
+            <div class="section-header text-center mb-6">
                 <span class="section-label">Localisation</span>
-                <h2 style="font-family:'Playfair Display', Georgia, serif; font-size:1.5rem; font-weight:400;">Venir nous voir</h2>
+                <h2 class="font-['Playfair_Display',_Georgia,_serif] text-[1.5rem] font-normal">Venir nous voir</h2>
             </div>
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.0!2d-3.98!3d5.36!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRiviera+Anono!5e0!3m2!1sfr!2sci" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte Google Maps - Localisation Showroom Aliagui Home"></iframe>
@@ -110,9 +126,9 @@
             <div class="footer-brand">
                 <h4>ALIAGUI HOME</h4>
                 <p>Le raffinement du pagne réinventé. Confort, authenticité et qualité premium pour sublimer vos intérieurs.</p>
-                <div class="footer-social" style="margin-top:1.25rem;">
+                <div class="footer-social mt-5">
                     <a href="#" aria-label="Instagram">
-                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.34-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                     </a>
                     <a href="#" aria-label="TikTok">
                         <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.48V13a8.28 8.28 0 005.58 2.16v-3.44a4.85 4.85 0 01-3.77-1.26V6.69h3.77z"/></svg>
@@ -155,7 +171,7 @@
                     <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
                     sublime.room@gmail.com
                 </div>
-                <div class="footer-contact-item" style="color:rgba(253,251,247,0.35); margin-top:0.5rem;">
+                <div class="footer-contact-item text-[#fdfbf7]/35 mt-2">
                     <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
                     Abidjan, Côte d'Ivoire
                 </div>
