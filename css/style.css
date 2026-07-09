@@ -1,9 +1,4 @@
-/* ═══════════════════════════════════════════════════════
-   ALIAGUI HOME — Design System & Global Styles
-   (Pure CSS version without :root variables)
-   ═══════════════════════════════════════════════════════ */
 
-/* ─── Reset & Base ─── */
 *,
 *::before,
 *::after {
@@ -21,7 +16,7 @@ html {
 body {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     background-color: #FDFBF7;
-    color: #0F2027;
+    color: #28161A;
     line-height: 1.7;
     overflow-x: hidden;
 }
@@ -64,7 +59,7 @@ button {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #C56C51;
+    background: #A5422D;
 }
 
 .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -72,7 +67,7 @@ button {
 
 /* ─── Selection ─── */
 ::selection {
-    background: #C56C51;
+    background: #A5422D;
     color: #FDFBF7;
 }
 
@@ -261,7 +256,7 @@ button {
     font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 0.15em;
-    color: #0F2027;
+    color: #28161A;
     position: relative;
 }
 
@@ -272,7 +267,7 @@ button {
     left: 0;
     width: 0;
     height: 2px;
-    background: #C56C51;
+    background: #A5422D;
     transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -291,7 +286,7 @@ button {
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-weight: 500;
-    color: #0F2027;
+    color: #28161A;
     position: relative;
     padding: 4px 0;
 }
@@ -303,7 +298,7 @@ button {
     left: 0;
     width: 0;
     height: 1.5px;
-    background: #C56C51;
+    background: #A5422D;
     transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -313,18 +308,18 @@ button {
 }
 
 .nav-link.active {
-    color: #C56C51;
+    color: #A5422D;
 }
 
 .nav-link:hover {
-    color: #C56C51;
+    color: #A5422D;
 }
 
 .btn-whatsapp-nav {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: #C56C51;
+    background: #A5422D;
     color: #FDFBF7;
     padding: 10px 20px;
     font-size: 0.65rem;
@@ -336,9 +331,9 @@ button {
 }
 
 .btn-whatsapp-nav:hover {
-    background: #0F2027;
+    background: #28161A;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(197, 108, 81, 0.25);
+    box-shadow: 0 4px 12px rgba(165, 66, 45, 0.25);
 }
 
 /* Mobile Menu */
@@ -373,7 +368,7 @@ button {
 
 .mobile-menu a:hover,
 .mobile-menu a.active {
-    color: #C56C51;
+    color: #A5422D;
     padding-left: 0.5rem;
 }
 
@@ -387,8 +382,8 @@ button {
    ═══════════════════════════════════════════════════════ */
 
 .announcement-bar {
-    background: #0F2027;
-    color: rgba(253, 251, 247, 0.8);
+    background: #28161A;
+    color: #FFFFFF;
     text-align: center;
     padding: 0.5rem 1rem;
     font-size: 0.65rem;
@@ -397,7 +392,7 @@ button {
 }
 
 .announcement-bar strong {
-    color: #C56C51;
+    color: #A5422D;
     font-weight: 600;
 }
 
@@ -2048,4 +2043,76 @@ button {
         opacity: 1;
         transform: none;
     }
+}
+/* Agrandir les titres du footer (Navigation, Collections, Contact...) */
+.site-footer h4 {
+    font-size: 1.4rem; 
+    letter-spacing: 1px;
+}
+
+.site-footer h5.footer-heading {
+    font-size: 1.1rem; 
+    font-weight: 600;  
+    margin-bottom: 15px;
+}
+
+/* Agrandir le texte de description, les liens et les infos de contact */
+.site-footer p, 
+.site-footer .footer-links a, 
+.site-footer .footer-contact-item {
+    font-size: 0.95rem; 
+    line-height: 1.6;   
+    opacity: 0.85;      
+}
+
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+.site-footer {
+    font-size: 18px;          
+    font-weight: 500;         
+    color: #ffffff !important; 
+}
+
+/* 2. On agrandit le gros titre (Le nom de la marque) */
+.site-footer h4 {
+    font-size: 26px;
+    font-weight: 500;         
+    margin-bottom: 15px;
+}
+
+
+.site-footer h5.footer-heading {
+    font-size: 20px;
+    font-weight: 500;         
+    color: #ffffff;
+    margin-bottom: 20px;       
+}
+
+
+.site-footer .footer-links a {
+    font-size: 18px;
+    color: #fdfbf7;
+    opacity: 0.95;            
+    text-decoration: none;
+}
+
+.site-footer .footer-contact-item {
+    font-size: 18px;
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+.footer-bottom p {
+    font-size: 15px;
+    opacity: 0.8;
+    color: #ffffff !important;
+}
+.footer-brand p {
+    font-size: 16px;
+    color: #ffffff !important;
+    opacity: 0.9;
 }
