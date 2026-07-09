@@ -2005,6 +2005,25 @@ button {
     white-space: nowrap;
     border: 0;
 }
+/* ═══════════════════════════════════════════════
+   AJUSTEMENT DES ESPACEMENTS INTER-SECTIONS
+   ═══════════════════════════════════════════════ */
+
+/* Section Témoignages */
+.testimonials-section {
+    margin-bottom: 4rem; /* Crée un espace propre avant la newsletter */
+}
+
+/* Section Newsletter */
+.newsletter-section {
+    margin-bottom: 5rem; /* Crée l'espace parfait avant le footer */
+}
+
+/* Optionnel : Si vous voulez aussi de l'espace entre vos cartes de témoignages */
+.testimonials-track {
+    display: flex;
+    gap: 1.5rem; /* Évite que les cartes de témoignages ne se collent entre elles */
+}
 
 /* ═══════════════════════════════════════════════════════
    RESPONSIVE — Final Touch-ups
