@@ -1,13 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Une question ou un projet ? Contactez Aliagui Home pour votre linge de lit et sets de table en pagne africain premium.">
-    <meta name="theme-color" content="#0F2027">
-    <title>Aliagui Home | Contactez-nous</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="L'histoire d'Aliagui Home — Un souvenir d'enfance transformé en promesse pour aujourd'hui. Linge de maison raffiné inspiré du pagne africain."
+    />
+    <meta name="theme-color" content="#0F2027" />
+    <title>Aliagui Home | À propos de nous</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght=300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -33,12 +39,11 @@
         }
       }
     </script>
-</head>
-<body class="bg-brand-light text-brand-charcoal font-sans antialiased overflow-x-hidden">
-
+  </head>
+  <body class="bg-brand-light text-brand-charcoal font-sans antialiased overflow-x-hidden">
     <!-- ═══ Bandeau d'annonce ═══ -->
     <div class="bg-brand-dark text-white text-center py-2 px-4 text-[10px] uppercase tracking-[0.2em] font-light">
-        Sublime Room devient <strong class="text-brand-terracotta font-semibold">Aliagui Home</strong> — Une nouvelle ère de raffinement
+      Sublime Room devient <strong class="text-brand-terracotta font-semibold">Aliagui Home</strong> — Une nouvelle ère de raffinement
     </div>
 
     <!-- ═══ HEADER / Navigation ═══ -->
@@ -56,10 +61,10 @@
         <!-- Menu de navigation desktop -->
         <nav class="hidden lg:flex items-center gap-8">
           <a href="index.html" class="text-xs uppercase tracking-wider font-medium hover:text-brand-accent transition-colors duration-300">Accueil</a>
-          <a href="propos.html" class="text-xs uppercase tracking-wider font-medium hover:text-brand-accent transition-colors duration-300">A propos</a>
+          <a href="propos.html" class="text-xs uppercase tracking-wider font-medium text-brand-accent transition-colors duration-300">A propos</a>
           <a href="collections.html" class="text-xs uppercase tracking-wider font-medium hover:text-brand-accent transition-colors duration-300">Collections</a>
           <a href="showroom.html" class="text-xs uppercase tracking-wider font-medium hover:text-brand-accent transition-colors duration-300">Showroom</a>
-          <a href="contact.html" class="text-xs uppercase tracking-wider font-medium text-brand-accent transition-colors duration-300">Contact</a>
+          <a href="contact.html" class="text-xs uppercase tracking-wider font-medium hover:text-brand-accent transition-colors duration-300">Contact</a>
           <a
             href="https://wa.me/2250142789097"
             target="_blank"
@@ -89,10 +94,10 @@
         class="mobile-menu lg:hidden bg-brand-light border-b border-brand-border px-6 py-8 flex flex-col space-y-4"
       >
         <a href="index.html" class="block text-sm uppercase tracking-wider font-medium py-2 border-b border-brand-border hover:text-brand-accent hover:pl-2 transition-all duration-300">Accueil</a>
-        <a href="propos.html" class="block text-sm uppercase tracking-wider font-medium py-2 border-b border-brand-border hover:text-brand-accent hover:pl-2 transition-all duration-300">A propos</a>
+        <a href="propos.html" class="block text-sm uppercase tracking-wider font-medium py-2 border-b border-brand-border text-brand-accent pl-2 transition-all duration-300">A propos</a>
         <a href="collections.html" class="block text-sm uppercase tracking-wider font-medium py-2 border-b border-brand-border hover:text-brand-accent hover:pl-2 transition-all duration-300">Collections</a>
         <a href="showroom.html" class="block text-sm uppercase tracking-wider font-medium py-2 border-b border-brand-border hover:text-brand-accent hover:pl-2 transition-all duration-300">Showroom</a>
-        <a href="contact.html" class="block text-sm uppercase tracking-wider font-medium py-2 border-b border-brand-border text-brand-accent pl-2 transition-all duration-300">Contact</a>
+        <a href="contact.html" class="block text-sm uppercase tracking-wider font-medium py-2 border-b border-brand-border hover:text-brand-accent hover:pl-2 transition-all duration-300">Contact</a>
         <a
           href="https://wa.me/2250142789097"
           target="_blank"
@@ -105,61 +110,96 @@
       </div>
     </header>
 
-    <!-- ═══ MAIN CONTACT CONTENT ═══ -->
-    <main class="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
-        <div class="text-center mb-12 reveal">
-            <span class="text-[10px] uppercase tracking-[0.25em] text-brand-terracotta font-semibold block mb-2">Restons en contact</span>
-            <h1 class="font-serif text-3xl md:text-4xl text-brand-charcoal font-light leading-snug">Une question ou un projet ?</h1>
-            <p class="text-xs md:text-sm font-light text-brand-charcoal/60 max-w-xl mx-auto mt-4 leading-relaxed">Besoin d'un conseil personnalisé pour votre aménagement ou d'une commande sur-mesure ? Nous vous répondons rapidement.</p>
-            <div class="w-12 h-[2px] bg-brand-terracotta mx-auto mt-4"></div>
-        </div>
+    <!-- ═══ PAGE HERO — A propos ═══ -->
+    <section class="relative bg-brand-dark py-24 md:py-36 overflow-hidden flex items-center justify-center">
+      <!-- Background subtle image overlay -->
+      <div class="absolute inset-0 opacity-15 bg-cover bg-center" style="background-image: url('images/alh2.jpg');"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent"></div>
+      
+      <div class="relative max-w-5xl mx-auto px-4 text-center reveal">
+        <span class="text-[10px] uppercase tracking-[0.25em] text-brand-terracotta font-semibold block mb-4">À Propos</span>
+        <h1 class="font-serif text-3xl md:text-5xl lg:text-6xl text-brand-light font-light leading-tight">
+          Tout a commencé avec<br>
+          <span class="italic font-normal text-brand-terracotta">un souvenir d'enfance.</span>
+        </h1>
+        <div class="w-16 h-[2px] bg-brand-terracotta mx-auto mt-8"></div>
+      </div>
+    </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 max-w-5xl mx-auto items-start">
-            <!-- Infos de contact -->
-            <div class="space-y-8 bg-brand-accentLight/10 border border-brand-border p-8 rounded-[2px] reveal-left">
-                <div>
-                    <h3 class="font-serif text-lg font-medium text-brand-charcoal mb-2">Canaux Directs</h3>
-                    <p class="text-sm font-light text-brand-charcoal leading-relaxed">📞 +225 01 42 78 90 97</p>
-                    <p class="text-sm font-light text-brand-charcoal leading-relaxed">✉️ sublime.room@gmail.com</p>
-                </div>
-                <div>
-                    <h3 class="font-serif text-lg font-medium text-brand-charcoal mb-2">Le Showroom</h3>
-                    <p class="text-xs font-light text-brand-charcoal/80 leading-relaxed">Riviera Anono, face au marché, Abidjan</p>
-                    <p class="text-brand-charcoal/50 text-[10px] tracking-wider uppercase mt-1">Du Mardi au Samedi, de 10h à 19h</p>
-                </div>
-                <div>
-                    <h3 class="font-serif text-lg font-medium text-brand-charcoal mb-2">Suivez-nous</h3>
-                    <p class="text-[10px] uppercase tracking-wider text-brand-terracotta font-semibold">Instagram / TikTok / Facebook</p>
-                </div>
-            </div>
+    <!-- ═══ SECTION HISTOIRE — Les Origines ═══ -->
+    <section class="py-16 md:py-24 max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Contenu texte (7 colonnes sur large) -->
+        <div class="lg:col-span-7 reveal-left space-y-8">
+          <span class="text-[10px] uppercase tracking-[0.25em] text-brand-terracotta font-semibold block">Les Origines</span>
+          <h2 class="font-serif text-2xl md:text-3xl text-brand-charcoal font-light leading-relaxed">
+            Le pagne de maman
+          </h2>
+          <div class="w-12 h-[1px] bg-brand-terracotta"></div>
+          
+          <p class="text-base md:text-lg font-light leading-relaxed text-brand-charcoal/80">
+            Celui du pagne de maman, ce tissu africain dans lequel on se blottissait pour se sentir protégé, aimé et chez soi. C'est ce souvenir précieux que Carole Aliagui Aman Maïmouna a voulu transformer en quelque chose de durable.
+          </p>
+          
+          <p class="text-base md:text-lg font-light leading-relaxed text-brand-charcoal/80">
+            En <strong>2018</strong>, elle crée <strong>Sublime Room</strong> avec une idée simple mais puissante : marier le confort du linge de maison moderne à l'authenticité du pagne africain. Parce qu'un drap, ce n'est pas seulement un tissu. C'est une expérience, un art de vivre, une mémoire.
+          </p>
 
-            <!-- Formulaire de contact -->
-            <div class="bg-white border border-brand-border p-8 md:p-10 rounded-[2px] reveal-right stagger-2">
-                <form id="contact-whatsapp-form">
-                    <div class="mb-6">
-                        <label for="form-name" class="block text-[10px] uppercase tracking-wider font-semibold mb-2 text-brand-dark">Nom Complet</label>
-                        <input type="text" id="form-name" class="w-full bg-brand-light border border-brand-dark/15 focus:border-brand-terracotta focus:outline-none px-4 py-3 text-sm font-light text-brand-dark transition-colors duration-300 rounded-[2px]" placeholder="Votre nom" required>
-                    </div>
-                    <div class="mb-6">
-                        <label for="form-message" class="block text-[10px] uppercase tracking-wider font-semibold mb-2 text-brand-dark">Votre Message</label>
-                        <textarea id="form-message" class="w-full bg-brand-light border border-brand-dark/15 focus:border-brand-terracotta focus:outline-none px-4 py-3 text-sm font-light text-brand-dark transition-colors duration-300 rounded-[2px] h-[120px] resize-y" placeholder="Expliquez-nous votre besoin (dimensions, collections...)" required></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-brand-terracotta text-brand-light hover:bg-brand-terracottaHover py-4 text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-md hover:-translate-y-0.5 rounded-[2px]">Envoyer via WhatsApp</button>
-                </form>
-            </div>
+          <!-- Bloc citation stylisé -->
+          <div class="bg-brand-accentLight/10 border-l-2 border-brand-terracotta p-6 md:p-8 italic relative">
+            <span class="font-serif text-6xl text-brand-terracotta/20 absolute -top-4 left-4 select-none">“</span>
+            <p class="text-sm md:text-base font-light text-brand-charcoal/90 relative z-10 pl-4">
+              Aujourd'hui, <strong>Aliagui Home</strong> naît de cette même conviction. Une marque ivoirienne de linge de maison en pagne, raffinée et chaleureuse, qui croit que le confort africain mérite sa place dans chaque chambre.
+            </p>
+          </div>
         </div>
+        
+        <!-- Image de la fondatrice/inspiration (5 colonnes sur large) -->
+        <div class="lg:col-span-5 reveal-right stagger-2 flex justify-center">
+          <div class="relative w-full max-w-md">
+            <!-- Decorative border accent -->
+            <div class="absolute -top-4 -right-4 w-1/2 h-1/2 border border-brand-terracotta opacity-40 -z-10"></div>
+            <div class="absolute -bottom-4 -left-4 w-1/2 h-1/2 bg-brand-accentLight/20 -z-10"></div>
+            
+            <div class="border border-brand-border bg-white p-2">
+              <img 
+                src="images/fondatrice.jpg" 
+                alt="Carole Aliagui Aman Maimouna - Fondatrice d'Aliagui Home" 
+                class="w-full h-auto object-cover aspect-[3/4]"
+              />
+              <div class="text-center py-4 bg-brand-light">
+                <h3 class="font-serif text-sm font-medium text-brand-charcoal">Carole Aliagui Aman Maïmouna</h3>
+                <p class="text-[10px] uppercase tracking-wider text-brand-charcoal/50 mt-1">Fondatrice & Designer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Google Maps Embed -->
-        <div class="reveal-scale stagger-3 mt-16 max-w-5xl mx-auto">
-            <div class="text-center mb-8">
-                <span class="text-[10px] uppercase tracking-[0.25em] text-brand-terracotta font-semibold block mb-2">Localisation</span>
-                <h2 class="font-serif text-xl font-normal text-brand-charcoal">Venir nous voir</h2>
-            </div>
-            <div class="relative w-full h-[400px] border border-brand-border bg-[#F5F0E8] overflow-hidden">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.0!2d-3.98!3d5.36!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRiviera+Anono!5e0!3m2!1sfr!2sci" class="w-full h-full border-none" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte Google Maps - Localisation Showroom Aliagui Home"></iframe>
-            </div>
-        </div>
-    </main>
+    <!-- ═══ CTA SECTION ═══ -->
+    <section class="py-20 text-center max-w-4xl mx-auto px-4 reveal">
+      <h2 class="font-serif text-2xl md:text-4xl text-brand-charcoal font-light mb-6">
+        Invitez la douceur africaine dans votre intérieur
+      </h2>
+      <p class="text-sm md:text-base font-light text-brand-charcoal/60 max-w-xl mx-auto mb-10 leading-relaxed">
+        Découvrez nos collections de parures de lit et d'accessoires de table conçus pour apporter confort et raffinement.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a 
+          href="collections.html" 
+          class="bg-brand-dark text-brand-light hover:bg-brand-terracotta px-8 py-4 text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-md hover:-translate-y-0.5"
+        >
+          Découvrir nos Collections
+        </a>
+        <a 
+          href="showroom.html" 
+          class="bg-transparent border border-brand-charcoal/30 text-brand-charcoal hover:bg-brand-charcoal hover:text-brand-light px-8 py-4 text-xs uppercase tracking-widest font-semibold transition-all duration-300 hover:-translate-y-0.5"
+        >
+          Visiter le Showroom
+        </a>
+      </div>
+    </section>
 
     <!-- ═══ FOOTER ═══ -->
     <footer class="bg-brand-dark text-brand-light pt-16 pb-8 border-t border-brand-border">
@@ -168,7 +208,7 @@
         <div class="lg:col-span-4 space-y-4">
           <h4 class="font-serif text-lg tracking-wider text-brand-terracotta font-semibold">ALIAGUI HOME</h4>
           <p class="text-sm font-light text-brand-light/80 leading-relaxed max-w-sm">
-            Le raffinement du pagne réinventé. Confort, authenticité et qualité premium pour sublimer vos intérieurs.
+            Le raffinement du pagne réinventé. Confort, authenticité et quality premium pour sublimer vos intérieurs.
           </p>
           <!-- Social Icons -->
           <div class="flex items-center gap-4 pt-2">
@@ -195,10 +235,10 @@
           <h5 class="text-sm uppercase tracking-widest text-brand-terracotta font-semibold">Navigation</h5>
           <ul class="space-y-2 text-sm font-light text-brand-light/80">
             <li><a href="index.html" class="hover:text-brand-terracotta transition-colors duration-300">Accueil</a></li>
-            <li><a href="propos.html" class="hover:text-brand-terracotta transition-colors duration-300">A propos</a></li>
+            <li><a href="propos.html" class="hover:text-brand-terracotta transition-colors duration-300 text-brand-terracotta">A propos</a></li>
             <li><a href="collections.html" class="hover:text-brand-terracotta transition-colors duration-300">Collections</a></li>
             <li><a href="showroom.html" class="hover:text-brand-terracotta transition-colors duration-300">Showroom</a></li>
-            <li><a href="contact.html" class="text-brand-terracotta transition-colors duration-300">Contact</a></li>
+            <li><a href="contact.html" class="hover:text-brand-terracotta transition-colors duration-300">Contact</a></li>
           </ul>
         </div>
 
@@ -247,5 +287,5 @@
     </footer>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
