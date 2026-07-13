@@ -15,86 +15,133 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: '#0F2027',
+                light: '#FDFBF7',
+                charcoal: '#28161A',
+                terracotta: '#C56C51',
+                terracottaHover: '#B35D43',
+                accent: '#A5422D',
+                accentLight: '#D2B49F',
+                border: 'rgba(230, 223, 211, 0.45)',
+              }
+            },
+            fontFamily: {
+              serif: ['Beyline', 'Georgia', 'serif'],
+              sans: ['Cangkem', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
   </head>
-  <body>
+  <body class="bg-brand-light text-brand-charcoal font-sans antialiased overflow-x-hidden">
     <!-- ═══ Bandeau d'annonce ═══ -->
-    <div class="announcement-bar">
-      Sublime Room devient <strong>Aliagui Home</strong> — Une nouvelle ère de
-      raffinement
+    <div class="bg-brand-dark text-white text-center py-2 px-4 text-[10px] uppercase tracking-[0.2em] font-light">
+      Sublime Room devient <strong class="text-brand-terracotta font-semibold">Aliagui Home</strong> — Une nouvelle ère de raffinement
     </div>
 
     <!-- ═══ HEADER / Navigation ═══ -->
-    <!-- ═══ HEADER / Navigation Corrigé ═══ -->
-<!-- ═══ HEADER / Navigation Corrigé ═══ -->
-<header class="site-header bg-white border-b border-[rgba(230,223,211,0.45)]">
-  <!-- flex et items-center forcent l'alignement vertical parfait de tous les éléments -->
-  <div class="header-inner flex items-center justify-between h-24 px-4 max-w-7xl mx-auto">
-    
-    <!-- Zone Logo ajustée -->
-    <a href="index.html" class="logo flex items-center h-full py-2">
-      <img 
-        src="images/logo.svg" 
-        alt="Aliagui Home" 
-        class="h-full w-auto max-h-16 object-contain"
-      />
-    </a>
+    <header class="site-header bg-white border-b border-brand-border sticky top-0 z-50">
+      <div class="flex items-center justify-between h-24 px-4 md:px-8 max-w-7xl mx-auto w-full">
+        <!-- Zone Logo -->
+        <a href="index.html" class="logo flex items-center h-full py-2">
+          <img 
+            src="images/logo.svg" 
+            alt="Aliagui Home" 
+            class="h-full w-auto max-h-16 object-contain"
+          />
+        </a>
 
-    <!-- Menu de navigation -->
-    <nav class="nav-desktop flex items-center gap-8">
-      <a href="index.html" class="nav-link">Accueil</a>
-      <a href="collections.html" class="nav-link">Collections</a>
-      <a href="showroom.html" class="nav-link">Showroom</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-      <a
-        href="https://wa.me/2250142789097"
-        target="_blank"
-        rel="noopener"
-        class="btn-whatsapp-nav flex items-center gap-2"
-        aria-label="Contactez-nous sur WhatsApp">
-        WhatsApp
-      </a>
-    </nav>
+        <!-- Menu de navigation desktop -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="text-xs uppercase tracking-wider font-medium text-brand-accent transition-colors duration-300">Accueil</a>
+          <a href="propos.html" class="text-xs uppercase tracking-wider font-medium hover:text-brand-accent transition-colors duration-300">A propos</a>
+          <a href="collections.html" class="text-xs uppercase tracking-wider font-medium hover:text-brand-accent transition-colors duration-300">Collections</a>
+          <a href="showroom.html" class="text-xs uppercase tracking-wider font-medium hover:text-brand-accent transition-colors duration-300">Showroom</a>
+          <a href="contact.html" class="text-xs uppercase tracking-wider font-medium hover:text-brand-accent transition-colors duration-300">Contact</a>
+          <a
+            href="https://wa.me/2250142789097"
+            target="_blank"
+            rel="noopener"
+            class="border border-brand-charcoal hover:border-brand-accent text-brand-charcoal hover:text-brand-light hover:bg-brand-accent px-5 py-2.5 text-[10px] uppercase tracking-widest font-semibold transition-all duration-300 flex items-center gap-2"
+            aria-label="Contactez-nous sur WhatsApp">
+            WhatsApp
+          </a>
+        </nav>
 
-    <!-- Bouton Menu Mobile (Burger) -->
-    <button
-      id="menu-btn"
-      class="menu-toggle lg:hidden"
-      aria-label="Ouvrir le menu"
-      aria-expanded="false"
-    >
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
-  </div>
-</header>
-    <!-- ═══════════════════════════════════════════════
-         HERO — Section Principale
-         ═══════════════════════════════════════════════ -->
-    <section class="hero">
-      <div class="hero-grid">
-        <div class="hero-content reveal">
-          <div class="hero-badge">
-            <span class="dot"></span>
+        <!-- Bouton Menu Mobile (Burger) -->
+        <button
+          id="menu-btn"
+          class="flex lg:hidden p-2 text-brand-charcoal focus:outline-none"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Menu Mobile Container -->
+      <div
+        id="mobile-menu"
+        class="mobile-menu lg:hidden bg-brand-light border-b border-brand-border px-6 py-8 flex flex-col space-y-4"
+      >
+        <a href="index.html" class="block text-sm uppercase tracking-wider font-medium py-2 border-b border-brand-border text-brand-accent pl-2 transition-all duration-300">Accueil</a>
+        <a href="propos.html" class="block text-sm uppercase tracking-wider font-medium py-2 border-b border-brand-border hover:text-brand-accent hover:pl-2 transition-all duration-300">A propos</a>
+        <a href="collections.html" class="block text-sm uppercase tracking-wider font-medium py-2 border-b border-brand-border hover:text-brand-accent hover:pl-2 transition-all duration-300">Collections</a>
+        <a href="showroom.html" class="block text-sm uppercase tracking-wider font-medium py-2 border-b border-brand-border hover:text-brand-accent hover:pl-2 transition-all duration-300">Showroom</a>
+        <a href="contact.html" class="block text-sm uppercase tracking-wider font-medium py-2 border-b border-brand-border hover:text-brand-accent hover:pl-2 transition-all duration-300">Contact</a>
+        <a
+          href="https://wa.me/2250142789097"
+          target="_blank"
+          rel="noopener"
+          class="block text-center border border-brand-charcoal hover:border-brand-accent text-brand-charcoal hover:text-brand-light hover:bg-brand-accent py-3 text-[10px] uppercase tracking-widest font-semibold transition-all duration-300"
+          aria-label="Contactez-nous sur WhatsApp"
+        >
+          WhatsApp
+        </a>
+      </div>
+    </header>
+
+    <!-- ═══ HERO — Section Principale ═══ -->
+    <section class="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-20 lg:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Contenu Texte -->
+        <div class="flex flex-col gap-6 max-w-xl reveal">
+          <div class="inline-flex items-center gap-2 w-fit bg-gradient-to-r from-brand-terracotta to-[#D4846E] text-brand-light px-4 py-2 text-[9px] uppercase tracking-[0.15em] font-semibold rounded-[2px] animate-pulse">
+            <span class="w-1.5 h-1.5 bg-brand-light rounded-full animate-ping"></span>
             Nouvelle Collection 2026
           </div>
-          <h1>Le souvenir doux du <em>pagne de maman</em> réinventé.</h1>
-          <p class="hero-description">
-            Découvrez notre gamme exclusive de linge de maison premium mêlant
-            confort et authenticité culturelle. Chaque pièce raconte une
-            histoire, la vôtre.
+          <h1 class="font-serif text-3xl md:text-5xl lg:text-6xl font-light leading-tight tracking-tight">
+            Le souvenir doux du <em class="italic font-normal text-brand-terracotta">pagne de maman</em> réinventé.
+          </h1>
+          <p class="text-sm md:text-base text-brand-charcoal/60 font-light leading-relaxed max-w-lg">
+            Découvrez notre gamme exclusive de linge de maison premium mêlant confort et authenticité culturelle. Chaque pièce raconte une histoire, la vôtre.
           </p>
-          <div class="hero-actions">
-            <a href="collections.html" class="btn btn-primary">Découvrir</a>
-            <a href="showroom.html" class="btn btn-outline">Le Showroom</a>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="collections.html" class="bg-brand-dark text-brand-light hover:bg-brand-terracotta px-8 py-4 text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-md hover:-translate-y-0.5">Découvrir</a>
+            <a href="showroom.html" class="bg-transparent border border-brand-charcoal/30 text-brand-charcoal hover:bg-brand-charcoal hover:text-brand-light px-8 py-4 text-xs uppercase tracking-widest font-semibold transition-all duration-300 hover:-translate-y-0.5">Le Showroom</a>
           </div>
         </div>
 
-        <div class="hero-image-wrapper reveal-right stagger-2">
-          <div class="hero-image-frame" data-parallax="0.2">
+        <!-- Image Hero -->
+        <div class="relative w-full max-w-lg mx-auto lg:max-w-none reveal-right stagger-2">
+          <!-- Decorative Background Blocks -->
+          <div class="absolute -top-5 -right-5 w-1/2 h-1/2 border border-brand-terracotta opacity-25 -z-10" data-parallax="0.1"></div>
+          <div class="absolute -bottom-5 -left-5 w-2/5 h-2/5 bg-[#E6DFD3] opacity-20 -z-10" data-parallax="0.1"></div>
+          
+          <div class="relative aspect-[4/5] overflow-hidden border border-brand-border bg-[#F5F0E8] group" data-parallax="0.2">
             <img
               src="images/essaie2.jpg"
               alt="Parure de lit en pagne africain dans une chambre élégante — Aliagui Home"
+              class="w-full h-full object-cover transition-transform duration-[8000ms] ease-out group-hover:scale-105"
               loading="eager"
             />
           </div>
@@ -102,586 +149,405 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════
-         MARQUEE — Bandeau Défilant
-         ═══════════════════════════════════════════════ -->
-    <div class="marquee-section" aria-hidden="true">
-      <div class="marquee-track">
-        <span class="marquee-item"
-          >Confort <span class="separator">#</span></span
-        >
-        <span class="marquee-item"
-          >Authenticité <span class="separator">◆</span></span
-        >
-        <span class="marquee-item"
-          >Pagne Premium <span class="separator">◆</span></span
-        >
-        <span class="marquee-item"
-          >Art de Vivre <span class="separator">◆</span></span
-        >
-        <span class="marquee-item"
-          >Douceur <span class="separator">◆</span></span
-        >
-        <span class="marquee-item"
-          >Raffinement <span class="separator">◆</span></span
-        >
-        <span class="marquee-item"
-          >Zéro Peluche <span class="separator">◆</span></span
-        >
-        <span class="marquee-item"
-          >Made in Africa <span class="separator">◆</span></span
-        >
+    <!-- ═══ MARQUEE — Bandeau Défilant ═══ -->
+    <div class="bg-brand-dark py-4 overflow-hidden relative" aria-hidden="true">
+      <div class="flex w-max animate-[marqueeScroll_30s_linear_infinite] hover:[animation-play-state:paused] cursor-pointer">
+        <span class="flex items-center gap-8 px-8 whitespace-nowrap text-brand-light/60 text-[10px] uppercase tracking-[0.25em] font-light">Confort <span class="text-brand-terracotta text-[8px]">◆</span></span>
+        <span class="flex items-center gap-8 px-8 whitespace-nowrap text-brand-light/60 text-[10px] uppercase tracking-[0.25em] font-light">Authenticité <span class="text-brand-terracotta text-[8px]">◆</span></span>
+        <span class="flex items-center gap-8 px-8 whitespace-nowrap text-brand-light/60 text-[10px] uppercase tracking-[0.25em] font-light">Pagne Premium <span class="text-brand-terracotta text-[8px]">◆</span></span>
+        <span class="flex items-center gap-8 px-8 whitespace-nowrap text-brand-light/60 text-[10px] uppercase tracking-[0.25em] font-light">Art de Vivre <span class="text-brand-terracotta text-[8px]">◆</span></span>
+        <span class="flex items-center gap-8 px-8 whitespace-nowrap text-brand-light/60 text-[10px] uppercase tracking-[0.25em] font-light">Douceur <span class="text-brand-terracotta text-[8px]">◆</span></span>
+        <span class="flex items-center gap-8 px-8 whitespace-nowrap text-brand-light/60 text-[10px] uppercase tracking-[0.25em] font-light">Raffinement <span class="text-brand-terracotta text-[8px]">◆</span></span>
+        <span class="flex items-center gap-8 px-8 whitespace-nowrap text-brand-light/60 text-[10px] uppercase tracking-[0.25em] font-light">Zéro Peluche <span class="text-brand-terracotta text-[8px]">◆</span></span>
+        <span class="flex items-center gap-8 px-8 whitespace-nowrap text-brand-light/60 text-[10px] uppercase tracking-[0.25em] font-light">Made in Africa <span class="text-brand-terracotta text-[8px]">◆</span></span>
         <!-- Duplication for seamless loop -->
-        <span class="marquee-item"
-          >Confort <span class="separator">◆</span></span
-        >
-        <span class="marquee-item"
-          >Authenticité <span class="separator">◆</span></span
-        >
-        <span class="marquee-item"
-          >Pagne Premium <span class="separator">◆</span></span
-        >
-        <span class="marquee-item"
-          >Art de Vivre <span class="separator">◆</span></span
-        >
-        <span class="marquee-item"
-          >Douceur <span class="separator">◆</span></span
-        >
-        <span class="marquee-item"
-          >Raffinement <span class="separator">◆</span></span
-        >
-        <span class="marquee-item"
-          >Zéro Peluche <span class="separator">◆</span></span
-        >
-        <span class="marquee-item"
-          >Made in Africa <span class="separator">◆</span></span
-        >
+        <span class="flex items-center gap-8 px-8 whitespace-nowrap text-brand-light/60 text-[10px] uppercase tracking-[0.25em] font-light">Confort <span class="text-brand-terracotta text-[8px]">◆</span></span>
+        <span class="flex items-center gap-8 px-8 whitespace-nowrap text-brand-light/60 text-[10px] uppercase tracking-[0.25em] font-light">Authenticité <span class="text-brand-terracotta text-[8px]">◆</span></span>
+        <span class="flex items-center gap-8 px-8 whitespace-nowrap text-brand-light/60 text-[10px] uppercase tracking-[0.25em] font-light">Pagne Premium <span class="text-brand-terracotta text-[8px]">◆</span></span>
+        <span class="flex items-center gap-8 px-8 whitespace-nowrap text-brand-light/60 text-[10px] uppercase tracking-[0.25em] font-light">Art de Vivre <span class="text-brand-terracotta text-[8px]">◆</span></span>
+        <span class="flex items-center gap-8 px-8 whitespace-nowrap text-brand-light/60 text-[10px] uppercase tracking-[0.25em] font-light">Douceur <span class="text-brand-terracotta text-[8px]">◆</span></span>
+        <span class="flex items-center gap-8 px-8 whitespace-nowrap text-brand-light/60 text-[10px] uppercase tracking-[0.25em] font-light">Raffinement <span class="text-brand-terracotta text-[8px]">◆</span></span>
+        <span class="flex items-center gap-8 px-8 whitespace-nowrap text-brand-light/60 text-[10px] uppercase tracking-[0.25em] font-light">Zéro Peluche <span class="text-brand-terracotta text-[8px]">◆</span></span>
+        <span class="flex items-center gap-8 px-8 whitespace-nowrap text-brand-light/60 text-[10px] uppercase tracking-[0.25em] font-light">Made in Africa <span class="text-brand-terracotta text-[8px]">◆</span></span>
       </div>
     </div>
 
-    <!-- ═══════════════════════════════════════════════
-         À PROPOS / HISTOIRE
-         ═══════════════════════════════════════════════ -->
-    <section class="section border-top-subtle about-section">
-      <div class="about-grid">
-        <div class="about-content reveal-left">
-          <span class="section-label">Notre Histoire</span>
-          <h2 class="section-title">À propos d'Aliagui Home</h2>
-          <div class="section-divider"></div>
-          <p class="mt-6 text-base font-light leading-[1.8]">
-            Tout a commencé avec un souvenir d'enfance. Celui du pagne de maman,
-            ce tissu africain dans lequel on se blottissait pour se sentir
-            protégé, aimé et chez soi. C'est ce souvenir précieux que Carole
-            Aliagui Aman Maïmouna a voulu transformer en quelque chose de
-            durable. En 2018, elle crée Sublime Room avec une idea simple mais
-            puissante : marier le confort du linge de maison moderne à
-            l'authenticité du pagne africain. Parce qu'un drap, ce n'est pas
-            seulement un tissu. C'est une expérience, un art de vivre, une
-            mémoire. Aujourd'hui, Aliagui Home naît de cette même conviction.
-            Une marque ivoirienne de linge de maison en pagne, raffinée et
-            chaleureuse, qui croit que le confort africain mérite sa place dans
-            chaque chambre. Nos draps sont conçus avec des pagnes de qualité
-            supérieure, sans dégorgement ni peluches, pour vous offrir douceur
-            et élégance au quotidien. Parce qu'on n'achète pas juste un drap. On
-            s'offre une parenthèse de douceur à l'africaine. L’art de vivre
-            africain, le confort au quotidien.
-          </p>
-          <p
-            class="mt-4 text-[0.85rem] text-[#0F2027]/60 font-light leading-[1.8]"
-          >
-            Anciennement connue sous le nom de Sublime Room, notre marque entame
-            son rebranding pour s'orienter vers un univers lifestyle premium
-            accessible encore plus raffiné et chaleureux.
-          </p>
+
+    <!-- ═══ COMPTEURS ANIMÉS ═══ -->
+    <section class="bg-brand-dark text-white py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center reveal">
+        <div class="flex flex-col gap-2">
+          <div class="font-serif text-3xl md:text-5xl font-light text-brand-terracotta" data-count="500" data-prefix="+">0</div>
+          <div class="text-[10px] md:text-xs uppercase tracking-widest text-brand-light/60 font-light">Clients Satisfaits</div>
         </div>
-        <!-- Image : Réduite et Proportionnelle - Occupe 1 colonne sur 3 -->
-        <div
-          class="image-wrapper reveal-right stagger-2 md:col-span-1 flex md:justify-end"
-        >
-          <!-- J'ai ajouté max-w-[400px] pour la taille, rounded-lg pour le style, et mr-12 pour l'espace -->
-          <img
-            src="images/fondatrice.jpg"
-            alt="La fondatrice d'Aliagui Home au travail"
-            class="clean-image w-full max-w-[400px] h-auto object-cover rounded-lg shadow-xl md:mr-12"
-          />
+        <div class="flex flex-col gap-2">
+          <div class="font-serif text-3xl md:text-5xl font-light text-brand-terracotta" data-count="100" data-suffix="%">0</div>
+          <div class="text-[10px] md:text-xs uppercase tracking-widest text-brand-light/60 font-light">Coton Premium</div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <div class="font-serif text-3xl md:text-5xl font-light text-brand-terracotta" data-count="0">0</div>
+          <div class="text-[10px] md:text-xs uppercase tracking-widest text-brand-light/60 font-light">Peluche Garantie</div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <div class="font-serif text-3xl md:text-5xl font-light text-brand-terracotta" data-count="15" data-prefix="+">0</div>
+          <div class="text-[10px] md:text-xs uppercase tracking-widest text-brand-light/60 font-light">Motifs Exclusifs</div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════
-         COMPTEURS ANIMÉS
-         ═══════════════════════════════════════════════ -->
-    <section class="section-full counters-section">
-      <div class="container py-[var(--section-gap)]">
-        <div class="counters-grid reveal">
-          <div class="counter-item">
-            <div class="counter-number" data-count="500" data-prefix="+">0</div>
-            <div class="counter-label">Clients Satisfaits</div>
-          </div>
-          <div class="counter-item">
-            <div class="counter-number" data-count="100" data-suffix="%">0</div>
-            <div class="counter-label">Coton Premium</div>
-          </div>
-          <div class="counter-item">
-            <div class="counter-number" data-count="0">0</div>
-            <div class="counter-label">Peluche Garantie</div>
-          </div>
-          <div class="counter-item">
-            <div class="counter-number" data-count="15" data-prefix="+">0</div>
-            <div class="counter-label">Motifs Exclusifs</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════
-         VALEURS DE LA MARQUE — Avec Icônes SVG
-         ═══════════════════════════════════════════════ -->
-    <section class="section-full values-section">
-      <div class="container py-[var(--section-gap)]">
-        <div class="section-header text-center reveal">
-          <span class="section-label">Nos Fondations</span>
-          <h2 class="section-title">Les Valeurs de la Marque</h2>
-          <div class="section-divider mx-auto"></div>
+    <!-- ═══ VALEURS DE LA MARQUE ═══ -->
+    <section class="bg-[#F5F0E8] border-y border-brand-border py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="text-center mb-12 reveal">
+          <span class="text-[10px] uppercase tracking-[0.25em] text-brand-terracotta font-semibold block mb-2">Nos Fondations</span>
+          <h2 class="font-serif text-2xl md:text-3xl text-brand-charcoal font-light leading-snug">Les Valeurs de la Marque</h2>
+          <div class="w-12 h-[2px] bg-brand-terracotta mx-auto mt-4"></div>
         </div>
 
-        <div class="values-grid">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Confort -->
-          <div class="value-card reveal stagger-1">
-            <div class="value-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
-                />
+          <div class="bg-brand-light border border-brand-border p-8 flex flex-col gap-4 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl relative overflow-hidden group reveal stagger-1">
+            <div class="absolute top-0 left-0 w-[3px] h-0 bg-brand-terracotta transition-all duration-700 group-hover:h-full"></div>
+            <div class="w-10 h-10 flex items-center justify-center text-brand-terracotta">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
               </svg>
             </div>
-            <h3>Confort</h3>
-            <p>
-              Chaque produit Aliagui Home est conçu pour faire du lit un espace
-              de refuge et de bien-être.
+            <h3 class="font-serif text-lg font-medium text-brand-charcoal">Confort</h3>
+            <p class="text-sm font-light text-brand-charcoal/70 leading-relaxed">
+              Chaque produit Aliagui Home est conçu pour faire du lit un espace de refuge et de bien-être.
             </p>
           </div>
 
           <!-- Authenticité -->
-          <div class="value-card reveal stagger-2">
-            <div class="value-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
-                />
+          <div class="bg-brand-light border border-brand-border p-8 flex flex-col gap-4 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl relative overflow-hidden group reveal stagger-2">
+            <div class="absolute top-0 left-0 w-[3px] h-0 bg-brand-terracotta transition-all duration-700 group-hover:h-full"></div>
+            <div class="w-10 h-10 flex items-center justify-center text-brand-terracotta">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
               </svg>
             </div>
-            <h3>Authenticité</h3>
-            <p>
-              Aliagui Home puise ses racines dans le pagne africain, un tissu
-              chargé de mémoire et de culture, pour créer des produits
-              authentiquement africains et contemporains.
+            <h3 class="font-serif text-lg font-medium text-brand-charcoal">Authenticité</h3>
+            <p class="text-sm font-light text-brand-charcoal/70 leading-relaxed">
+              Aliagui Home puise ses racines dans le pagne africain, un tissu chargé de mémoire et de culture, pour des créations contemporaines.
             </p>
           </div>
 
           <!-- Douceur -->
-          <div class="value-card reveal stagger-3">
-            <div class="value-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-                />
+          <div class="bg-brand-light border border-brand-border p-8 flex flex-col gap-4 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl relative overflow-hidden group reveal stagger-3">
+            <div class="absolute top-0 left-0 w-[3px] h-0 bg-brand-terracotta transition-all duration-700 group-hover:h-full"></div>
+            <div class="w-10 h-10 flex items-center justify-center text-brand-terracotta">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
               </svg>
             </div>
-            <h3>Douceur</h3>
-            <p>
-              De la texture du tissu à l'expérience d'achat, chaque detail est
-              pensé pour envelopper le client dans une sensation de douceur et
-              d'apaisement.
+            <h3 class="font-serif text-lg font-medium text-brand-charcoal">Douceur</h3>
+            <p class="text-sm font-light text-brand-charcoal/70 leading-relaxed">
+              De la texture du tissu à l'expérience d'achat, chaque détail est pensé pour vous envelopper dans un cocon d'apaisement.
             </p>
           </div>
 
           <!-- Qualité -->
-          <div class="value-card reveal stagger-4">
-            <div class="value-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"
-                />
+          <div class="bg-brand-light border border-brand-border p-8 flex flex-col gap-4 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl relative overflow-hidden group reveal stagger-4">
+            <div class="absolute top-0 left-0 w-[3px] h-0 bg-brand-terracotta transition-all duration-700 group-hover:h-full"></div>
+            <div class="w-10 h-10 flex items-center justify-center text-brand-terracotta">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
               </svg>
             </div>
-            <h3>Qualité</h3>
-            <p>
-              Aliagui Home sélectionne des pagnes de qualité supérieure,
-              confortables, durables, sans dégorgement ni peluches.
+            <h3 class="font-serif text-lg font-medium text-brand-charcoal">Qualité</h3>
+            <p class="text-sm font-light text-brand-charcoal/70 leading-relaxed">
+              Aliagui Home sélectionne des pagnes de qualité supérieure, confortables et sans dégorgement ni peluches.
             </p>
           </div>
 
           <!-- Art de vivre -->
-          <div class="value-card reveal stagger-5">
-            <div class="value-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-                />
+          <div class="bg-brand-light border border-brand-border p-8 flex flex-col gap-4 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl relative overflow-hidden group reveal stagger-5">
+            <div class="absolute top-0 left-0 w-[3px] h-0 bg-brand-terracotta transition-all duration-700 group-hover:h-full"></div>
+            <div class="w-10 h-10 flex items-center justify-center text-brand-terracotta">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
               </svg>
             </div>
-            <h3>Art de Vivre</h3>
-            <p>
-              Aliagui Home transforme la chambre en un véritable espace de vie,
-              où chaque détail contribue à une expérience de confort et de
-              beauté quotidienne.
+            <h3 class="font-serif text-lg font-medium text-brand-charcoal">Art de Vivre</h3>
+            <p class="text-sm font-light text-brand-charcoal/70 leading-relaxed">
+              Nous transformons votre chambre en un espace de vie, où chaque détail contribue à votre bien-être au quotidien.
             </p>
           </div>
 
           <!-- Raffinement -->
-          <div class="value-card reveal stagger-6">
-            <div class="value-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"
-                />
+          <div class="bg-brand-light border border-brand-border p-8 flex flex-col gap-4 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl relative overflow-hidden group reveal stagger-6">
+            <div class="absolute top-0 left-0 w-[3px] h-0 bg-brand-terracotta transition-all duration-700 group-hover:h-full"></div>
+            <div class="w-10 h-10 flex items-center justify-center text-brand-terracotta">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
               </svg>
             </div>
-            <h3>Raffinement</h3>
-            <p>
-              Aliagui Home traduit le pagne en élégance sobre et contemporaine,
-              sans surcharge ni cliché, pour un raffinement qui parle à tous.
+            <h3 class="font-serif text-lg font-medium text-brand-charcoal">Raffinement</h3>
+            <p class="text-sm font-light text-brand-charcoal/70 leading-relaxed">
+              Aliagui Home traduit le pagne en élégance sobre et contemporaine, pour un style intemporel et chaleureux.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════
-         COLLECTION PHARE — ANTIQUE
-         ═══════════════════════════════════════════════ -->
-    <section class="section border-top-subtle">
-      <div class="section-header reveal">
-        <span class="section-label">Le Choix Signature</span>
-        <h2 class="section-title uppercase tracking-[0.05em]">
-          La Collection Antique
-        </h2>
+    <!-- ═══ COLLECTION PHARE — ANTIQUE ═══ -->
+    <section class="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24 border-t border-brand-border/60">
+      <div class="text-left mb-12 reveal">
+        <span class="text-[10px] uppercase tracking-[0.25em] text-brand-terracotta font-semibold block mb-2">Le Choix Signature</span>
+        <h2 class="font-serif text-2xl md:text-3xl text-brand-charcoal font-light leading-snug uppercase tracking-[0.05em]">La Collection Antique</h2>
+        <div class="w-12 h-[2px] bg-brand-terracotta mt-4"></div>
       </div>
 
-      <div class="featured-grid">
-        <div class="featured-image reveal-left">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Image de la collection -->
+        <div class="relative w-full max-w-lg mx-auto lg:max-w-none overflow-hidden aspect-[4/3] md:aspect-[16/10] group reveal-left">
           <img
             src="images/1img.jpg"
             alt="Collection Antique — Parure de lit en pagne premium rouge avec motifs cauris, Aliagui Home"
+            class="w-full h-full object-cover transition-transform duration-[6000ms] ease-out group-hover:scale-105"
           />
-          <div class="featured-badge">Best-Seller</div>
+          <div class="absolute top-4 left-4 bg-brand-accent text-brand-light px-3 py-1.5 text-[9px] uppercase tracking-widest font-semibold">Best-Seller</div>
         </div>
 
-        <div class="featured-info reveal-right stagger-2">
+        <!-- Info de la collection -->
+        <div class="flex flex-col gap-6 max-w-xl reveal-right stagger-2">
           <div>
-            <h3>L'élégance intemporelle</h3>
-            <p class="collection-label">Collection ANTIQUE</p>
+            <h3 class="font-serif text-2xl md:text-3xl font-light text-brand-charcoal">L'élégance intemporelle</h3>
+            <p class="text-[10px] uppercase tracking-[0.2em] text-brand-terracotta font-semibold mt-1">Collection ANTIQUE</p>
           </div>
-          <p>
-            Le raffinement du pagne réinventé à travers des motifs ancestraux
-            pour sublimer votre intérieur. Des cauris symboles de fortune sur un
-            rouge royal pour transformer votre chambre en demeure royale.
+          <p class="text-sm md:text-base text-brand-charcoal/70 font-light leading-relaxed">
+            Le raffinement du pagne réinventé à travers des motifs ancestraux pour sublimer votre intérieur. Des cauris symboles de fortune sur un rouge royal pour transformer votre chambre en demeure de prestige.
           </p>
-          <div class="featured-actions">
+          <div class="flex flex-wrap gap-4 pt-2">
             <a
               href="https://wa.me/2250142789097?text=Antique"
               target="_blank"
               rel="noopener"
-              class="btn btn-terracotta"
-              >Commander via WhatsApp</a
+              class="bg-brand-terracotta text-brand-light hover:bg-brand-terracottaHover px-8 py-4 text-xs uppercase tracking-widest font-semibold transition-all duration-300 hover:-translate-y-0.5"
             >
-            <a href="collections.html" class="btn btn-outline"
-              >Voir toute la collection</a
-            >
+              Commander via WhatsApp
+            </a>
+            <a href="collections.html" class="bg-transparent border border-brand-charcoal/30 text-brand-charcoal hover:bg-brand-charcoal hover:text-brand-light px-8 py-4 text-xs uppercase tracking-widest font-semibold transition-all duration-300 hover:-translate-y-0.5">
+              Voir toute la collection
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════
-         TÉMOIGNAGES CLIENTS
-         ═══════════════════════════════════════════════ -->
-    <section class="section-full testimonials-section">
-      <div class="container py-[var(--section-gap)]">
-        <div class="section-header text-center reveal">
-          <span class="section-label">Ils nous font confiance</span>
-          <h2 class="section-title">Ce que disent nos clients</h2>
-          <div class="section-divider mx-auto"></div>
+    <!-- ═══ TÉMOIGNAGES CLIENTS ═══ -->
+    <section class="bg-brand-light py-16 md:py-24 border-t border-brand-border/60">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="text-center mb-12 reveal">
+          <span class="text-[10px] uppercase tracking-[0.25em] text-brand-terracotta font-semibold block mb-2">Ils nous font confiance</span>
+          <h2 class="font-serif text-2xl md:text-3xl text-brand-charcoal font-light leading-snug">Ce que disent nos clients</h2>
+          <div class="w-12 h-[2px] bg-brand-terracotta mx-auto mt-4"></div>
         </div>
 
-        <div class="testimonials-wrapper reveal">
-          <div class="testimonials-track" id="testimonial-track">
+        <div class="max-w-4xl mx-auto px-4 relative overflow-hidden group reveal">
+          <!-- Carrousel container -->
+          <div class="flex transition-transform duration-500 ease-out" id="testimonial-track">
             <!-- Témoignage 1 -->
-            <div class="testimonial-card">
-              <div class="testimonial-inner">
-                <div class="testimonial-stars">★ ★ ★ ★ ★</div>
-                <p class="testimonial-text">
-                  La qualité du pagne est exceptionnelle. Après plusieurs
-                  lavages, les couleurs sont toujours aussi vives et le tissu
-                  n'a pas bougé. Ma chambre a changé d'allure !
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-white border border-brand-border p-8 md:p-12 text-center flex flex-col gap-4 max-w-2xl mx-auto shadow-sm">
+                <div class="text-brand-terracotta text-sm tracking-wider">★ ★ ★ ★ ★</div>
+                <p class="font-serif text-base md:text-lg italic font-light text-brand-charcoal/80 leading-relaxed">
+                  La qualité du pagne est exceptionnelle. Après plusieurs lavages, les couleurs sont toujours aussi vives et le tissu n'a pas bougé. Ma chambre a changé d'allure !
                 </p>
-                <p class="testimonial-author">Aminata K.</p>
-                <p class="testimonial-location">Cocody, Abidjan</p>
+                <div>
+                  <p class="font-semibold text-xs md:text-sm text-brand-charcoal uppercase tracking-wider">Aminata K.</p>
+                  <p class="text-[10px] md:text-xs text-brand-charcoal/40 uppercase tracking-widest font-light mt-1">Cocody, Abidjan</p>
+                </div>
               </div>
             </div>
 
             <!-- Témoignage 2 -->
-            <div class="testimonial-card">
-              <div class="testimonial-inner">
-                <div class="testimonial-stars">★ ★ ★ ★ ★</div>
-                <p class="testimonial-text">
-                  J'ai commandé la collection Antique pour offrir à ma mère.
-                  Elle était émue de retrouver les motifs de son enfance sur un
-                  produit aussi premium. Bravo Aliagui Home.
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-white border border-brand-border p-8 md:p-12 text-center flex flex-col gap-4 max-w-2xl mx-auto shadow-sm">
+                <div class="text-brand-terracotta text-sm tracking-wider">★ ★ ★ ★ ★</div>
+                <p class="font-serif text-base md:text-lg italic font-light text-brand-charcoal/80 leading-relaxed">
+                  J'ai commandé la collection Antique pour offrir à ma mère. Elle était émue de retrouver les motifs de son enfance sur un produit aussi premium. Bravo Aliagui Home.
                 </p>
-                <p class="testimonial-author">Marc-Olivier D.</p>
-                <p class="testimonial-location">Plateau, Abidjan</p>
+                <div>
+                  <p class="font-semibold text-xs md:text-sm text-brand-charcoal uppercase tracking-wider">Marc-Olivier D.</p>
+                  <p class="text-[10px] md:text-xs text-brand-charcoal/40 uppercase tracking-widest font-light mt-1">Plateau, Abidjan</p>
+                </div>
               </div>
             </div>
 
             <!-- Témoignage 3 -->
-            <div class="testimonial-card">
-              <div class="testimonial-inner">
-                <div class="testimonial-stars">★ ★ ★ ★ ★</div>
-                <p class="testimonial-text">
-                  Zéro peluche, comme promis ! Après 6 mois d'utilisation
-                  quotidienne, mes draps sont comme neufs. Le pagne premium ça
-                  se sent dès qu'on touche le tissu.
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-white border border-brand-border p-8 md:p-12 text-center flex flex-col gap-4 max-w-2xl mx-auto shadow-sm">
+                <div class="text-brand-terracotta text-sm tracking-wider">★ ★ ★ ★ ★</div>
+                <p class="font-serif text-base md:text-lg italic font-light text-brand-charcoal/80 leading-relaxed">
+                  Zéro peluche, comme promis ! Après 6 mois d'utilisation quotidienne, mes draps sont comme neufs. Le pagne premium ça se sent dès qu'on touche le tissu.
                 </p>
-                <p class="testimonial-author">Fatou B.</p>
-                <p class="testimonial-location">Marcory, Abidjan</p>
+                <div>
+                  <p class="font-semibold text-xs md:text-sm text-brand-charcoal uppercase tracking-wider">Fatou B.</p>
+                  <p class="text-[10px] md:text-xs text-brand-charcoal/40 uppercase tracking-widest font-light mt-1">Marcory, Abidjan</p>
+                </div>
               </div>
             </div>
 
             <!-- Témoignage 4 -->
-            <div class="testimonial-card">
-              <div class="testimonial-inner">
-                <div class="testimonial-stars">★ ★ ★ ★ ★</div>
-                <p class="testimonial-text">
-                  Les sets de table ont totalement transformé notre salle à
-                  manger. Mes invités me demandent toujours où je les ai
-                  trouvés. La livraison a été rapide et soignée.
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-white border border-brand-border p-8 md:p-12 text-center flex flex-col gap-4 max-w-2xl mx-auto shadow-sm">
+                <div class="text-brand-terracotta text-sm tracking-wider">★ ★ ★ ★ ★</div>
+                <p class="font-serif text-base md:text-lg italic font-light text-brand-charcoal/80 leading-relaxed">
+                  Les sets de table ont totalement transformé notre salle à manger. Mes invités me demandent toujours où je les ai trouvés. La livraison a été rapide et soignée.
                 </p>
-                <p class="testimonial-author">Christelle A.</p>
-                <p class="testimonial-location">Riviera, Abidjan</p>
+                <div>
+                  <p class="font-semibold text-xs md:text-sm text-brand-charcoal uppercase tracking-wider">Christelle A.</p>
+                  <p class="text-[10px] md:text-xs text-brand-charcoal/40 uppercase tracking-widest font-light mt-1">Riviera, Abidjan</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Navigation -->
-          <div class="testimonials-arrows">
+          <!-- Arrows Navigation (hidden on mobile, visible on lg) -->
+          <div class="hidden lg:flex justify-between items-center w-full absolute top-1/2 -translate-y-1/2 left-0 pointer-events-none px-2">
             <button
-              class="testimonial-arrow"
+              class="w-10 h-10 border border-brand-charcoal/20 bg-brand-light/90 hover:bg-brand-charcoal hover:text-brand-light rounded-full flex items-center justify-center transition-all duration-300 pointer-events-auto shadow-sm"
               id="testimonial-prev"
               aria-label="Témoignage précédent"
             >
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  d="M15.75 19.5L8.25 12l7.5-7.5"
-                />
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 19.5L8.25 12l7.5-7.5" />
               </svg>
             </button>
             <button
-              class="testimonial-arrow"
+              class="w-10 h-10 border border-brand-charcoal/20 bg-brand-light/90 hover:bg-brand-charcoal hover:text-brand-light rounded-full flex items-center justify-center transition-all duration-300 pointer-events-auto shadow-sm"
               id="testimonial-next"
               aria-label="Témoignage suivant"
             >
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                />
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
               </svg>
             </button>
           </div>
 
-          <div class="testimonials-nav">
-            <button
-              class="testimonial-dot active"
-              aria-label="Aller au témoignage 1"
-            ></button>
-            <button
-              class="testimonial-dot"
-              aria-label="Aller au témoignage 2"
-            ></button>
-            <button
-              class="testimonial-dot"
-              aria-label="Aller au témoignage 3"
-            ></button>
-            <button
-              class="testimonial-dot"
-              aria-label="Aller au témoignage 4"
-            ></button>
+          <!-- Dots Indicators -->
+          <div class="flex justify-center gap-2 mt-8">
+            <button class="testimonial-dot w-2 h-2 rounded-full bg-brand-charcoal/20 transition-all duration-300" aria-label="Aller au témoignage 1"></button>
+            <button class="testimonial-dot w-2 h-2 rounded-full bg-brand-charcoal/20 transition-all duration-300" aria-label="Aller au témoignage 2"></button>
+            <button class="testimonial-dot w-2 h-2 rounded-full bg-brand-charcoal/20 transition-all duration-300" aria-label="Aller au témoignage 3"></button>
+            <button class="testimonial-dot w-2 h-2 rounded-full bg-brand-charcoal/20 transition-all duration-300" aria-label="Aller au témoignage 4"></button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════
-         NEWSLETTER
-         ═══════════════════════════════════════════════ -->
-    <section class="section-full newsletter-section py-[var(--section-gap)]">
-      <div class="container">
-        <div class="newsletter-content reveal">
-          <h2>Recevez nos nouveautés en avant-première</h2>
-          <p>
-            Inscrivez-vous pour être informé des nouvelles collections, des
-            offres exclusives et des événements du showroom.
-          </p>
-          <form class="newsletter-form" id="newsletter-form">
-            <input
-              type="email"
-              class="newsletter-input"
-              placeholder="Votre adresse email"
-              required
-              aria-label="Votre adresse email"
-            />
-            <button type="submit" class="newsletter-btn">S'inscrire</button>
-          </form>
-        </div>
+    <!-- ═══ NEWSLETTER ═══ -->
+    <section class="bg-[#c56c51] text-white py-16 md:py-24 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-5 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-terracotta via-transparent to-transparent"></div>
+      <div class="max-w-2xl mx-auto text-center px-4 space-y-6 relative z-10 reveal">
+        <h2 class="font-serif text-2xl md:text-3xl font-light leading-tight">Recevez nos nouveautés en avant-première</h2>
+        <p class="text-xs md:text-sm font-light text-brand-light/70 max-w-md mx-auto leading-relaxed">
+          Inscrivez-vous pour être informé des nouvelles collections, des offres exclusives et des événements du showroom.
+        </p>
+        <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto pt-4" id="newsletter-form">
+          <input
+            type="email"
+            class="bg-transparent border border-brand-light/30 focus:border-brand-light focus:outline-none px-5 py-4 text-xs tracking-wider text-brand-light placeholder:text-brand-light/40 w-full transition-colors duration-300"
+            placeholder="Votre adresse email"
+            required
+            aria-label="Votre adresse email"
+          />
+          <button type="submit" class="bg-brand-dark hover:bg-white px-8 py-4 text-[10px] uppercase tracking-widest font-semibold transition-all duration-300 whitespace-nowrap text-white hover:text-brand-dark">
+            S'inscrire
+          </button>
+        </form>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════
-         FOOTER
-         ═══════════════════════════════════════════════ -->
-    <footer class="site-footer">
-      <div class="footer-grid">
-        <!-- Marque -->
-        <div class="footer-brand">
-          <h4>ALIAGUI HOME</h4>
-          <p>
-            Le raffinement du pagne réinventé. Confort, authenticité et qualité
-            premium pour sublimer vos intérieurs.
+    <!-- ═══ FOOTER ═══ -->
+ <footer class="bg-brand-dark text-brand-light pt-16 pb-8 border-t border-brand-light/10 mt-10">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mb-12">
+        <!-- Marque (4 colonnes) -->
+        <div class="lg:col-span-4 space-y-4">
+          <h4 class="font-serif text-lg tracking-wider text-brand-terracotta font-semibold">ALIAGUI HOME</h4>
+          <p class="text-sm font-light text-brand-light/80 leading-relaxed max-w-sm">
+            Le raffinement du pagne réinventé. Confort, authenticité et qualité premium pour sublimer vos intérieurs.
           </p>
-          <div class="footer-social mt-5">
-            <a href="#" aria-label="Instagram">
-              <svg fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
-                />
+          <!-- Social Icons -->
+          <div class="flex items-center gap-4 pt-2">
+            <a href="#" class="text-brand-light/70 hover:text-brand-terracotta transition-colors duration-300" aria-label="Instagram">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
               </svg>
             </a>
-            <a href="#" aria-label="TikTok">
-              <svg fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.48V13a8.28 8.28 0 005.58 2.16v-3.44a4.85 4.85 0 01-3.77-1.26V6.69h3.77z"
-                />
+            <a href="#" class="text-brand-light/70 hover:text-brand-terracotta transition-colors duration-300" aria-label="TikTok">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.48V13a8.28 8.28 0 005.58 2.16v-3.44a4.85 4.85 0 01-3.77-1.26V6.69h3.77z" />
               </svg>
             </a>
-            <a href="#" aria-label="Facebook">
-              <svg fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                />
+            <a href="#" class="text-brand-light/70 hover:text-brand-terracotta transition-colors duration-300" aria-label="Facebook">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
               </svg>
             </a>
           </div>
         </div>
 
-        <!-- Navigation -->
-        <div>
-          <h5 class="footer-heading">Navigation</h5>
-          <ul class="footer-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="collections.html">Collections</a></li>
-            <li><a href="showroom.html">Showroom</a></li>
-            <li><a href="contact.html">Contact</a></li>
+        <!-- Navigation (2 colonnes) -->
+        <div class="lg:col-span-2 space-y-4">
+          <h5 class="text-sm uppercase tracking-widest text-brand-terracotta font-semibold">Navigation</h5>
+          <ul class="space-y-2 text-sm font-light text-brand-light/80">
+            <li><a href="index.html" class="text-brand-terracotta transition-colors duration-300">Accueil</a></li>
+            <li><a href="propos.html" class="hover:text-brand-terracotta transition-colors duration-300">A propos</a></li>
+            <li><a href="collections.html" class="hover:text-brand-terracotta transition-colors duration-300">Collections</a></li>
+            <li><a href="showroom.html" class="hover:text-brand-terracotta transition-colors duration-300">Showroom</a></li>
+            <li><a href="contact.html" class="hover:text-brand-terracotta transition-colors duration-300">Contact</a></li>
           </ul>
         </div>
 
-        <!-- Collections -->
-        <div>
-          <h5 class="footer-heading">Collections</h5>
-          <ul class="footer-links">
-            <li><a href="product-detail.html">Collection Antique</a></li>
-            <li><a href="collections.html">Draps de Lit</a></li>
-            <li><a href="collections.html">Art de la Table</a></li>
+        <!-- Collections (3 colonnes) -->
+        <div class="lg:col-span-3 space-y-4">
+          <h5 class="text-sm uppercase tracking-widest text-brand-terracotta font-semibold">Collections</h5>
+          <ul class="space-y-2 text-sm font-light text-brand-light/80">
+            <li><a href="product-detail.html" class="hover:text-brand-terracotta transition-colors duration-300">Collection Antique</a></li>
+            <li><a href="collections.html" class="hover:text-brand-terracotta transition-colors duration-300">Draps de Lit</a></li>
+            <li><a href="collections.html" class="hover:text-brand-terracotta transition-colors duration-300">Art de la Table</a></li>
           </ul>
         </div>
 
-        <!-- Contact -->
-        <div>
-          <h5 class="footer-heading">Contact</h5>
-          <div class="footer-contact-item">
-            <svg
-              width="14"
-              height="14"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
-              />
-            </svg>
-            +225 01 42 78 90 97
-          </div>
-          <div class="footer-contact-item">
-            <svg
-              width="14"
-              height="14"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-              />
-            </svg>
-            sublime.room@gmail.com
-          </div>
-          <div class="footer-contact-item text-[#fdfbf7]/35 mt-2">
-            <svg
-              width="14"
-              height="14"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-              />
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
-              />
-            </svg>
-            Abidjan, Côte d'Ivoire
-          </div>
+        <!-- Contact (3 colonnes) -->
+        <div class="lg:col-span-3 space-y-4">
+          <h5 class="text-sm uppercase tracking-widest text-brand-terracotta font-semibold">Contact</h5>
+          <ul class="space-y-3 text-sm font-light text-brand-light/80">
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-brand-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+              </svg>
+              +225 01 42 78 90 97
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-brand-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+              sublime.room@gmail.com
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-brand-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              Abidjan, Côte d'Ivoire
+            </li>
+          </ul>
         </div>
       </div>
 
-      <div class="footer-bottom">
+      <!-- Footer Bottom -->
+      <div class="max-w-7xl mx-auto px-4 md:px-8 border-t border-brand-border/30 pt-8 flex flex-col sm:flex-row items-center justify-between text-sm text-brand-light/50 gap-4">
         <p>&copy; 2026 Aliagui Home. Tous droits réservés.</p>
-        <p>Conçu avec cœur à Abidjan</p>
+        <p>Fusion Studio</p>
       </div>
     </footer>
 
     <script src="js/script.js"></script>
   </body>
 </html>
+
