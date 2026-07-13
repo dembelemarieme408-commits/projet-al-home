@@ -147,27 +147,3 @@ html {
     opacity: 1;
     border-color: #C56C51 !important;
 }
-
-
-@font-face {
-    font-family: 'Beyline';
-    src: url('fonts/Beyline-Regular.woff2') format('woff2'),
-         url('fonts/Beyline-Regular.woff') format('woff'),
-         url('fonts/Beyline-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* Première position : Beyline pour les grands titres */
-h1, .grand-titre, .main-title {
-    font-family: 'Beyline', sans-serif;
-    /* Ajustement recommandé car les polices display peuvent tailler petit ou grand */
-    letter-spacing: 0.02em; 
-}
-
-/* Deuxième position : Cangkem pour tout le reste (autres titres, textes, boutons) */
-body, h2, h3, h4, h5, h6, p, a, span, button {
-    font-family: 'Cangkem', sans-serif;
-}
-

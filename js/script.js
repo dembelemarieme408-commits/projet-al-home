@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
        10. PRODUCT DETAIL — Thumbnail Gallery
        ───────────────────────────────────────────── */
     const thumbnails = document.querySelectorAll('.product-thumb');
-    const mainProductImage = document.querySelector('.product-main-image img');
+    const mainProductImage = document.getElementById('main-product-img') || document.querySelector('.product-main-image img');
 
     if (thumbnails.length > 0 && mainProductImage) {
         thumbnails.forEach(thumb => {
