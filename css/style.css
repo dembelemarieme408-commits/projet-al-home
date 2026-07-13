@@ -148,6 +148,9 @@ html {
     border-color: #C56C51 !important;
 }
 
+/* ═══════════════════════════════════════════════════════
+   POLICES ET TYPOGRAPHIES CLEAN
+   ═══════════════════════════════════════════════════════ */
 
 @font-face {
     font-family: 'Beyline';
@@ -159,15 +162,25 @@ html {
     font-display: swap;
 }
 
-/* Première position : Beyline pour les grands titres */
+/* Beyline appliqué uniquement sur l'élément h1 et les classes de grands titres */
 h1, .grand-titre, .main-title {
-    font-family: 'Beyline', sans-serif;
-    /* Ajustement recommandé car les polices display peuvent tailler petit ou grand */
+    font-family: 'Beyline', 'Georgia', serif !important;
     letter-spacing: 0.02em; 
 }
 
-/* Deuxième position : Cangkem pour tout le reste (autres titres, textes, boutons) */
-body, h2, h3, h4, h5, h6, p, a, span, button {
-    font-family: 'Cangkem', sans-serif;
+/* Application globale héritée de Cangkem (évite de forcer chaque élément individuel pour préserver l'alignement du footer) */
+body, input, textarea, select, button {
+    font-family: 'Cangkem', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* ─── Forcer le fond crème sur les blocs de la page contact ─── */
+.bg-brand-light, 
+.grid-cols-1 > div {
+    background-color: #FDFBF7 !important;
+}
+
+/* On s'assure que les champs de saisie (inputs) restent bien blancs à l'intérieur */
+#contact-whatsapp-form input,
+#contact-whatsapp-form textarea {
+    background-color: #ffffff !important;
+}
